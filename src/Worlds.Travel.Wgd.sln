@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{D777106D-084C-47F2-B0EB-550C08EF0154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyWorlds.Model", "GalaxyWorlds.Model\GalaxyWorlds.Model.csproj", "{958B3757-28A5-48B8-A12F-1B9EFA92D230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndividualWorlds.Model", "IndividualWorlds.Model\IndividualWorlds.Model.csproj", "{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetWorlds.Model", "PlanetWorlds.Model\PlanetWorlds.Model.csproj", "{612F86A5-A507-4C97-93E5-366886A55A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Model", "Worlds.Model\Worlds.Model.csproj", "{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{99434AD5-C315-4DC6-A2C5-001F733BA2D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{23CF9903-E592-4D90-9757-1AD950810EC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataPersistence", "DataPersistence", "{99E8F876-87F4-4634-93CB-89C6B13F5752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndividualWorlds.Service", "IndividualWorlds.Service\IndividualWorlds.Service.csproj", "{08BC11CA-C703-49A0-B529-DFCD2219EEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.AccountService", "Worlds.Travel.AccountService\Worlds.Travel.AccountService.csproj", "{C34578B6-C015-47AE-8F3D-9D31F3325BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.Infrastructure", "Worlds.Travel.Infrastructure\Worlds.Travel.Infrastructure.csproj", "{D93B62D1-267C-4E10-A1E1-407087B23B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.Web", "Worlds.Travel.Web\Worlds.Travel.Web.csproj", "{CB60658C-7A5D-460E-A448-30B5A39E0D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.Web.Tests", "Worlds.Travel.Web.Tests\Worlds.Travel.Web.Tests.csproj", "{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{958B3757-28A5-48B8-A12F-1B9EFA92D230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958B3757-28A5-48B8-A12F-1B9EFA92D230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958B3757-28A5-48B8-A12F-1B9EFA92D230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958B3757-28A5-48B8-A12F-1B9EFA92D230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612F86A5-A507-4C97-93E5-366886A55A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612F86A5-A507-4C97-93E5-366886A55A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612F86A5-A507-4C97-93E5-366886A55A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612F86A5-A507-4C97-93E5-366886A55A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BC11CA-C703-49A0-B529-DFCD2219EEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BC11CA-C703-49A0-B529-DFCD2219EEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BC11CA-C703-49A0-B529-DFCD2219EEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BC11CA-C703-49A0-B529-DFCD2219EEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34578B6-C015-47AE-8F3D-9D31F3325BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34578B6-C015-47AE-8F3D-9D31F3325BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34578B6-C015-47AE-8F3D-9D31F3325BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34578B6-C015-47AE-8F3D-9D31F3325BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93B62D1-267C-4E10-A1E1-407087B23B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93B62D1-267C-4E10-A1E1-407087B23B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93B62D1-267C-4E10-A1E1-407087B23B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93B62D1-267C-4E10-A1E1-407087B23B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB60658C-7A5D-460E-A448-30B5A39E0D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB60658C-7A5D-460E-A448-30B5A39E0D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB60658C-7A5D-460E-A448-30B5A39E0D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB60658C-7A5D-460E-A448-30B5A39E0D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{958B3757-28A5-48B8-A12F-1B9EFA92D230} = {D777106D-084C-47F2-B0EB-550C08EF0154}
+		{65AA0DFB-6762-422F-AA2A-BBE8E555C68D} = {D777106D-084C-47F2-B0EB-550C08EF0154}
+		{612F86A5-A507-4C97-93E5-366886A55A6F} = {D777106D-084C-47F2-B0EB-550C08EF0154}
+		{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B} = {D777106D-084C-47F2-B0EB-550C08EF0154}
+		{08BC11CA-C703-49A0-B529-DFCD2219EEA3} = {23CF9903-E592-4D90-9757-1AD950810EC1}
+		{C34578B6-C015-47AE-8F3D-9D31F3325BE9} = {23CF9903-E592-4D90-9757-1AD950810EC1}
+		{D93B62D1-267C-4E10-A1E1-407087B23B32} = {23CF9903-E592-4D90-9757-1AD950810EC1}
+		{CB60658C-7A5D-460E-A448-30B5A39E0D0E} = {99434AD5-C315-4DC6-A2C5-001F733BA2D5}
+		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91} = {99434AD5-C315-4DC6-A2C5-001F733BA2D5}
+	EndGlobalSection
+EndGlobal
