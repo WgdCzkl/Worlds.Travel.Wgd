@@ -5,6 +5,10 @@
     /// </summary>
     public class PlanetCoordinates
     {
+        public PlanetCoordinates()
+        {
+
+        }
         public PlanetCoordinates(decimal lat, decimal lon, decimal height)
         {
             Lat = new Latitude(lat);

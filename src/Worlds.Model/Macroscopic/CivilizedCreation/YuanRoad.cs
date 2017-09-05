@@ -8,6 +8,10 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
     /// </summary>
     public class YuanRoad : YuanCivilizedCreation
     {
+        public YuanRoad()
+        {
+
+        }
         public YuanRoad(YuanName name) : base(name)
         {
         }

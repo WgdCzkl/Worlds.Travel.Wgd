@@ -11,6 +11,10 @@ namespace Worlds.Model.Dimension.Space.LongitudeAndLatitude
     /// </summary>
     public class Longitude : YuanUnit
     {
+        public Longitude()
+        {
+
+        }
         public Longitude(decimal value) : base(value)
         {
         }

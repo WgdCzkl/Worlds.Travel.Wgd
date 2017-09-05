@@ -13,6 +13,10 @@ namespace Worlds.Model.Civilization.DailyLife
     /// </summary>
     public class YuanStaircase : YuanCivilizedCreation
     {
+        public YuanStaircase()
+        {
+
+        }
         public YuanStaircase(YuanName name) : base(name)
         {
         }

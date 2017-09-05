@@ -11,6 +11,10 @@ namespace Worlds.Model.Dimension.Space.LongitudeAndLatitude
     /// </summary>
     public class CenterDistance : YuanUnit
     {
+        public CenterDistance()
+        {
+
+        }
         public CenterDistance(decimal value) : base(value)
         {
         }

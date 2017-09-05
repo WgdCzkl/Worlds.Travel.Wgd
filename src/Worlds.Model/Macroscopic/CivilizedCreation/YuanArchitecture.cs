@@ -14,6 +14,10 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
     /// </summary>
     public class YuanArchitecture : YuanCivilizedCreation
     {
+        public YuanArchitecture()
+        {
+
+        }
         public YuanArchitecture(YuanName name) : base(name)
         {
 
@@ -44,6 +48,10 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
     /// </summary>
     public class YuanStorey : YuanCivilizedCreation
     {
+        public YuanStorey()
+        {
+
+        }
         public YuanStorey(YuanName name) : base(name)
         {
         }

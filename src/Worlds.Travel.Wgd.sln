@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.Web", "Worlds
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Travel.Web.Tests", "Worlds.Travel.Web.Tests\Worlds.Travel.Web.Tests.csproj", "{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds.Trave.Repository.Common", "Worlds.Trave.Repository.Common\Worlds.Trave.Repository.Common.csproj", "{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{D93B62D1-267C-4E10-A1E1-407087B23B32} = {23CF9903-E592-4D90-9757-1AD950810EC1}
 		{CB60658C-7A5D-460E-A448-30B5A39E0D0E} = {99434AD5-C315-4DC6-A2C5-001F733BA2D5}
 		{216115B7-D14B-4FBB-BD3B-4CAC5E144E91} = {99434AD5-C315-4DC6-A2C5-001F733BA2D5}
+		{738DE686-EDA4-456C-BCD3-9DAA92BB9E79} = {99E8F876-87F4-4634-93CB-89C6B13F5752}
 	EndGlobalSection
 EndGlobal

@@ -14,6 +14,10 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
     /// </summary>
     public class YuanCivilizedCreation : Yuan
     {
+        public YuanCivilizedCreation()
+        {
+
+        }
 
         public YuanCivilizedCreation(YuanName name)
         {

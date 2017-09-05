@@ -11,10 +11,22 @@ namespace Worlds.Model.Civilization.Symbolizes
     /// </summary>
     public class YuanName : Yuan
     {
+        public YuanName()
+        {
+
+        }
         public YuanName(string name)
         {
             Name = name;
         }
+
+        public YuanName(string name,string keyName)
+        {
+            Name = name;
+            KeyName = keyName;
+        }
+
+        public string KeyName { get; set; }
 
         /// <summary>
         /// 全称

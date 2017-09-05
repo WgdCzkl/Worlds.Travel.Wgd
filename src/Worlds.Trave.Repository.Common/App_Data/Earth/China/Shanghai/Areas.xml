@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<ArrayOfYuanArea xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <YuanArea>
+    <ID>3fe3f4d0-c86f-45a9-98a8-0f5bc84cba78</ID>
+    <Name>
+      <ID>b0963595-3bda-44ac-bb90-995d5887c1a9</ID>
+      <KeyName>YangpuDistrict</KeyName>
+      <Name>杨浦区</Name>
+    </Name>
+    <AreaGrade>0</AreaGrade>
+  </YuanArea>
+  <YuanArea>
+    <ID>9fb0a5b8-8db0-4f72-8919-798937a6ffff</ID>
+    <Name>
+      <ID>6dbf9fbc-45db-4434-aac9-0bcff72d44a6</ID>
+      <KeyName>BaoshanDistrict</KeyName>
+      <Name>宝山区</Name>
+    </Name>
+    <AreaGrade>0</AreaGrade>
+  </YuanArea>
+  <YuanArea>
+    <ID>9fb0a5b8-8db0-4f72-8919-798937a6ffff</ID>
+    <Name>
+      <ID>6dbf9fbc-45db-4434-aac9-0bcff72d44a6</ID>
+      <KeyName>JinganDistrict</KeyName>
+      <Name>静安区</Name>
+    </Name>
+    <AreaGrade>0</AreaGrade>
+  </YuanArea>  
+</ArrayOfYuanArea>

@@ -14,6 +14,10 @@ namespace Worlds.Model.Civilization.Areas
     /// </summary>
     public class YuanArea : YuanCivilizedCreation
     {
+        public YuanArea()
+        {
+
+        }
         public YuanArea(YuanName name) : base(name)
         {
         }

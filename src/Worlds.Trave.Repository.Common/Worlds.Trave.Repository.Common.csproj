@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08BC11CA-C703-49A0-B529-DFCD2219EEA3}</ProjectGuid>
+    <ProjectGuid>{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IndividualWorlds.Service</RootNamespace>
-    <AssemblyName>IndividualWorlds.Service</AssemblyName>
+    <RootNamespace>Worlds.Trave.Repository.Common</RootNamespace>
+    <AssemblyName>Worlds.Trave.Repository.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.6.1\lib\net45\Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,33 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Humans\HumanWorldService.cs" />
-    <Compile Include="Humans\IHumanWorldService.cs" />
-    <Compile Include="IndividualWorldModule.cs" />
-    <Compile Include="Planets\IPlanetWorldService.cs" />
-    <Compile Include="Planets\PlanetWorldService.cs" />
+    <Compile Include="Helper\XmlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="App_Data\Worlds\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IndividualWorlds.Model\IndividualWorlds.Model.csproj">
-      <Project>{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}</Project>
-      <Name>IndividualWorlds.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PlanetWorlds.Model\PlanetWorlds.Model.csproj">
-      <Project>{612F86A5-A507-4C97-93E5-366886A55A6F}</Project>
-      <Name>PlanetWorlds.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Worlds.Model\Worlds.Model.csproj">
-      <Project>{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}</Project>
-      <Name>Worlds.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Worlds.Trave.Repository.Common\Worlds.Trave.Repository.Common.csproj">
-      <Project>{738de686-eda4-456c-bcd3-9daa92bb9e79}</Project>
-      <Name>Worlds.Trave.Repository.Common</Name>
-    </ProjectReference>
+    <Content Include="App_Data\Earth\China\Shanghai\Areas.xml" />
+    <Content Include="App_Data\Galaxys\SolarSystem.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

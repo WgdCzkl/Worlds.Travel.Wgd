@@ -8,6 +8,10 @@ namespace Worlds.Model
 {
     public class YuanUnit : Yuan
     {
+        public YuanUnit()
+        {
+
+        }
         public YuanUnit(Decimal value)
         {
             Value = value;
