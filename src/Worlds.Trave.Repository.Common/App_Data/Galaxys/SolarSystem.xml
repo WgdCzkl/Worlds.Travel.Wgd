@@ -1,1 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0"?>
+<ArrayOfGalaxy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Galaxy>
+    <ID>c6c31b16-3ebf-439d-88d2-b9dc8810911b</ID>
+    <Name>
+      <ID>c699254b-3ce1-4653-b8e1-725399905f8e</ID>
+      <Name>地球系</Name>
+    </Name>
+    <ChildrensGalaxy />
+    <CenterPlanet>
+      <ID>2ac0094f-7a5f-43c4-8f2f-1dc25c00d85f</ID>
+      <PlanetNo>0</PlanetNo>
+      <GalaxyID>c6c31b16-3ebf-439d-88d2-b9dc8810911b</GalaxyID>
+      <Name>
+        <ID>c699254b-3ce1-4653-b8e1-725399905f8e</ID>
+        <Name>地球</Name>
+        <KeyName>Earth</KeyName>
+      </Name>
+    </CenterPlanet>
+    <SurroundPlanets>
+      <Planet>
+        <ID>2ac0094f-7a5f-43c4-8f2f-1dc25c00d85f</ID>
+        <PlanetNo>0</PlanetNo>
+        <GalaxyID>c6c31b16-3ebf-439d-88d2-b9dc8810911b</GalaxyID>
+        <Name>
+          <ID>c699254b-3ce1-4653-b8e1-725399905f8e</ID>
+          <Name>地球</Name>
+          <KeyName>Earth</KeyName>
+        </Name>
+      </Planet>
+      <Planet>
+        <ID>31f70f6e-bfca-42ea-a339-fcb76c4902ac</ID>
+        <PlanetNo>0</PlanetNo>
+        <Name>
+          <ID>c699254b-3ce1-4653-b8e1-725399905f8e</ID>
+          <Name>月球</Name>
+        </Name>
+      </Planet>
+    </SurroundPlanets>
+  </Galaxy>
+</ArrayOfGalaxy>

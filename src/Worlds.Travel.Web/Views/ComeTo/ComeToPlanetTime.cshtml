@@ -1,0 +1,18 @@
+﻿@using Earth.Worlds.Civilization.Extensions;
+@model Worlds.Travel.Web.Models.ComeTo.ComeToPlanetTimeViewModel
+@{
+    ViewBag.Title = "选择降临时间";
+}
+
+
+
+<form id="form-login" class="p-t-15" action="@Url.Action("SelectedPlanetTime", "ComeTo")" , method="POST">
+    选择星球
+    <select name="planetTiemKeyName">
+        @foreach (var planet in Model.PlanetTimes)
+        {
+            <option value="@planet.KeyName">@planet.ToEarthTime()</option>
+        }
+    </select>
+    <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+</form>

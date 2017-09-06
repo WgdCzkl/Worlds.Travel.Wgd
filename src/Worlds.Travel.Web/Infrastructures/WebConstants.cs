@@ -9,6 +9,34 @@ namespace Worlds.Travel.Web.Infrastructures
     {
 
         #region Session
+
+        #region Come To
+        /// <summary>
+        /// 降临的星系
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_GALAXY = "ComeToGalaxy";
+
+        /// <summary>
+        /// 降临的星球
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_PLANET = "ComeToPlanet";
+
+        /// <summary>
+        /// 降临的时间
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_PLANET_TIME = "ComeToPlanetTime";
+
+        /// <summary>
+        /// 降临的区域
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_PLANET_AREA = "ComeToPlanetArea";
+
+        /// <summary>
+        /// 降临的 开放区域列表
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_OPEN_PLANET_AREAS = "ComeToOpenAreas";
+        #endregion
+
         /// <summary>
         /// 护照信息
         /// </summary>

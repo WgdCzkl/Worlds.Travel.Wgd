@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Worlds.Model.Civilization.Areas;
 
-namespace Worlds.Travel.Web.Models.Worlds
+namespace Worlds.Travel.Web.Models.ComeTo
 {
     public class ComeToWorldViewModel
     {

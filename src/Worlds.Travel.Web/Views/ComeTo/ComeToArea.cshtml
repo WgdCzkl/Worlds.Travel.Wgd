@@ -1,0 +1,17 @@
+﻿@model Worlds.Travel.Web.Models.ComeTo.ComeToAreaViewModel
+@{
+    ViewBag.Title = "选择降临时间";
+}
+
+
+
+<form id="form-login" class="p-t-15" action="@Url.Action("ComeToArea", "ComeTo")" , method="POST">
+    选择星球
+    <select name="areaKeyName">
+        @foreach (var area in Model.Areas)
+        {
+            <option value="@area.Name.KeyName">@area.Name</option>
+        }
+    </select>
+    <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+</form>

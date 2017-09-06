@@ -1,12 +1,14 @@
-﻿
+﻿@model Worlds.Travel.Web.Models.Home.SceneSelectionViewModel
 @{
-    ViewBag.Title = "场景选择页";
+    ViewBag.Title = "场景选择";
 }
 
-选择星系
-选择星球
-选择降临时空
 
-<form id="form-login" class="p-t-15" action="@Url.Action("GoWorld", "Home")" , method="POST">
+<form id="form-login" class="p-t-15" action="@Url.Action("ComeTo", "Home")" , method="POST">
+    模式
+    <select>
+        <option>参观</option>
+        <option>体验</option>
+    </select>
     <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
 </form>

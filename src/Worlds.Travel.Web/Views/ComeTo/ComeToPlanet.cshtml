@@ -1,0 +1,17 @@
+﻿@model Worlds.Travel.Web.Models.ComeTo.ComeToPlanetViewModel
+@{
+    ViewBag.Title = "选择星球";
+}
+
+
+
+<form id="form-login" class="p-t-15" action="@Url.Action("ComeToPlanetTime", "ComeTo")" , method="POST">
+    选择星球
+    <select name="planetKey">
+        @foreach (var planet in Model.Planets)
+        {
+            <option value="@planet.Key">@planet.Name</option>
+        }
+    </select>
+    <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+</form>

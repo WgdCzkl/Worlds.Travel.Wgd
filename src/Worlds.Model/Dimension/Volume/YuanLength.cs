@@ -8,6 +8,11 @@ namespace Worlds.Model.Dimension.Volume
 {
     public class YuanLength : YuanUnit
     {
+        public YuanLength()
+        {
+
+        }
+
         public YuanLength(decimal value) : base(value)
         {
         }

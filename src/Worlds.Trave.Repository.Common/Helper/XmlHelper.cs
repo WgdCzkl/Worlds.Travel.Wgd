@@ -60,7 +60,7 @@ namespace Worlds.Trave.Repository.Common.Helper
             {
                 serializer.Serialize(stream, pLT);
             }
-            catch { return null; }
+            catch (Exception ex) { return null; }
 
             stream.Position = 0;
             StringBuilder lbreturnStr = new StringBuilder();
@@ -143,7 +143,15 @@ namespace Worlds.Trave.Repository.Common.Helper
         public static List<T> XML2LTByFilePaht<T>(string path)
         {
             path = string.Format(@"{0}\{1}", XmlDataFileRootDirectory, path);
-            return XML2LT<T>(ReadXML(path));
+            if (File.Exists(path))
+            {
+                return XML2LT<T>(ReadXML(path));
+            }
+            else
+            {
+                return new List<T>();
+            }
+
         }
         #endregion
 

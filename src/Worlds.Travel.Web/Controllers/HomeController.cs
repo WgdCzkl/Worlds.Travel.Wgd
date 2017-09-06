@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Worlds.Model.Dimension.SpaceTime;
 using Worlds.Travel.Web.Controllers.Base;
 using Worlds.Travel.Web.Infrastructures;
+using Worlds.Travel.Web.Models.Home;
 
 namespace Worlds.Travel.Web.Controllers
 {
@@ -34,11 +35,12 @@ namespace Worlds.Travel.Web.Controllers
 
         public ActionResult SceneSelection()
         {
-
-            return View();
+            SceneSelectionViewModel vm = new SceneSelectionViewModel();
+         
+            return View(vm);
         }
 
-        public ActionResult GoWorld()
+        public ActionResult ComeTo()
         {
 
             PlanetSpaceTime time = null;
@@ -47,7 +49,7 @@ namespace Worlds.Travel.Web.Controllers
 
             SessionHelper.Add<HumanWorld>(WebConstants.SESSION_KEY_WORLD, humanWorld);
 
-            return RedirectToAction("ComeToWorld", "Worlds");
+            return RedirectToAction("ComeToGalaxy", "ComeTo");
         }
     }
 }

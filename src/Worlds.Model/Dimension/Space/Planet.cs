@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Worlds.Model.Civilization.Symbolizes;
 using Worlds.Model.Dimension.Quality;
 using Worlds.Model.Dimension.Time;
 using Worlds.Model.Dimension.Volume;
@@ -14,7 +15,12 @@ namespace Worlds.Model.Dimension.Space
     /// </summary>
     public class Planet : Yuan
     {
+
         #region 初始化
+        public Planet()
+        {
+
+        }
         public Planet(YuanQuality quality, YuanLength longRadius, YuanLength shortRadius, Planet revolutionPlanet)
         {
             Quality = quality;
@@ -23,6 +29,9 @@ namespace Worlds.Model.Dimension.Space
             RevolutionPlanet = revolutionPlanet;
         }
         #endregion
+
+
+        public YuanName Name { get; set; }
 
         #region 自然属性
         /// <summary>
@@ -59,16 +68,12 @@ namespace Worlds.Model.Dimension.Space
         /// <summary>
         /// 所属星系
         /// </summary>
-        public Galaxy Galaxy { get; set; }
+        public string GalaxyID { get; set; }
 
 
         #endregion
 
         #region 对内属性
-        /// <summary>
-        /// 内部名称
-        /// </summary>
-        public string InnerName { get; set; }
 
 
         /// <summary>

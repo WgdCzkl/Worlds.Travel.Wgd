@@ -10,8 +10,13 @@ namespace Worlds.Model.Dimension.Time
     /// <summary>
     /// 行星时间
     /// </summary>
-    public class PlanetTime
+    public class PlanetTime:Yuan
     {
+        public PlanetTime()
+        {
+
+        }
+
         public PlanetTime(decimal revolutionNumber, decimal rotationNumber)
         {
             RevolutionNumber = revolutionNumber;
@@ -22,14 +27,16 @@ namespace Worlds.Model.Dimension.Time
         /// <summary>
         /// 公转数目
         /// </summary>
-        public decimal RevolutionNumber { get; }
+        public decimal RevolutionNumber { get; set; }
 
         /// <summary>
         ///自转数目
         /// </summary>
-        public decimal RotationNumber { get; }
+        public decimal RotationNumber { get; set; }
 
-  
+
+
+        public string KeyName { get { return string.Format("{0}_{1}", RevolutionNumber, RotationNumber); } }
 
 
         #region ToString

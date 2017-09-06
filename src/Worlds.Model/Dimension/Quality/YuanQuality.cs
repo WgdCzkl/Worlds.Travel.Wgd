@@ -8,6 +8,10 @@ namespace Worlds.Model.Dimension.Quality
 {
     public class YuanQuality : YuanUnit
     {
+        public YuanQuality()
+        {
+
+        }
         public YuanQuality(decimal value) : base(value)
         {
 

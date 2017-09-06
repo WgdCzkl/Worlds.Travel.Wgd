@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<ArrayOfYuanArea xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <YuanArea>
+    <ID>3fe3f4d0-c86f-45a9-98a8-0f5bc84cba78</ID>
+    <Name>
+      <ID>b0963595-3bda-44ac-bb90-995d5887c1a9</ID>
+      <KeyName>ShanghaiCity</KeyName>
+      <Name>上海市</Name>
+    </Name>
+    <AreaGrade>0</AreaGrade>
+  </YuanArea>
+
+</ArrayOfYuanArea>

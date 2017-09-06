@@ -1,0 +1,15 @@
+﻿@model Worlds.Travel.Web.Models.ComeTo.ComeToGalaxyViewModel
+@{
+    ViewBag.Title = "选择星系";
+}
+
+<form id="form-login" class="p-t-15" action="@Url.Action("ComeToPlanet", "ComeTo")" , method="POST">
+    选择星系
+    <select name="galaxyKey">
+        @foreach (var galaxy in Model.Galaxys)
+        {
+            <option value="@galaxy.Key">@galaxy.Name</option>
+        }
+    </select>
+    <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+</form>

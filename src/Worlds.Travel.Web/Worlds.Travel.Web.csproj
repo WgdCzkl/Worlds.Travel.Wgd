@@ -145,8 +145,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Base\BaseComeToWorldsController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\Base\BaseWorldController.cs" />
+    <Compile Include="Controllers\ComeToController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorldsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -156,8 +158,12 @@
     <Compile Include="Infrastructures\SessionHelper.cs" />
     <Compile Include="Infrastructures\WebConstants.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
-    <Compile Include="Models\Worlds\ComeToAreaViewModel.cs" />
-    <Compile Include="Models\Worlds\ComeToWorldViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToPlanetTimeViewModel.cs" />
+    <Compile Include="Models\Home\SceneSelectionViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToAreaViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToGalaxyViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToPlanetViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToWorldViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,8 +180,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\SceneSelection.cshtml" />
-    <Content Include="Views\Worlds\ComeToWorld.cshtml" />
-    <Content Include="Views\Worlds\ComeToArea.cshtml" />
+    <Content Include="Views\ComeTo\ComeToWorld.cshtml" />
+    <Content Include="Views\ComeTo\ComeToArea.cshtml" />
+    <Content Include="Views\ComeTo\ComeToGalaxy.cshtml" />
+    <Content Include="Views\ComeTo\ComeToPlanet.cshtml" />
+    <Content Include="Views\ComeTo\ComeToPlanetTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -185,8 +194,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Worlds\" />
+    <Folder Include="Views\BaseComeToWorlds\" />
+    <Folder Include="Views\Worlds\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Earth.Worlds.Civilization\Earth.Worlds.Civilization.csproj">
+      <Project>{d57e7d01-a540-45d5-9a64-564d8ef062c6}</Project>
+      <Name>Earth.Worlds.Civilization</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IndividualWorlds.Model\IndividualWorlds.Model.csproj">
       <Project>{65AA0DFB-6762-422F-AA2A-BBE8E555C68D}</Project>
       <Name>IndividualWorlds.Model</Name>
