@@ -81,9 +81,14 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToArea(string areaKeyName)
         {
             var currArea = base.OpenAreas.Find(a => a.Name.KeyName == areaKeyName);
-            SessionHelper.Add<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_AREA, base.OpenAreas.Find(g => g.Name.KeyName == areaKeyName));
+            if (currArea == null)
+            {
+                return View("SceneSelection", "Home");
+            }
+            base.AddSelectedAreas(currArea);
+  
+            SessionHelper.Add<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_AREA, currArea);
             SessionHelper.Add<List<YuanArea>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_AREAS, GetNewOpenAreas());
-            base.SelectedAreas.Add(currArea);
 
             if (base.OpenAreas.Count > 0)
             {
@@ -94,6 +99,7 @@ namespace Worlds.Travel.Web.Controllers
             else
             {
                 ComeToWorldViewModel vm = new ComeToWorldViewModel();
+                vm.CurrArea = base.CurrArea;
                 return View("ComeToWorld", vm);
             }
 

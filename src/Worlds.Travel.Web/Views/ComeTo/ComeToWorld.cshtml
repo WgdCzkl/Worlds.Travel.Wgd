@@ -4,20 +4,19 @@
 }
 
 <form id="form-login" class="p-t-15" action="@Url.Action("ComeToArea", "Worlds")" , method="POST">
-    降临时间
-    <select>
-        @foreach (var area in Model.Areas)
-        {
-            <option value="@area.Key">@area.Name</option>
-        }
-    </select>
+   
+
     降临区域
-    <select>
-        @foreach (var area in Model.Areas)
-        {
-            <option value="@area.Key">@area.Name</option>
-        }
-    </select>
+    @if (Model.Architectures != null)
+    {
+        <select>
+            @foreach (var area in Model.Architectures)
+            {
+                <option value="@area.Key">@area.Name</option>
+            }
+        </select>
+    }
+   
 
    
 

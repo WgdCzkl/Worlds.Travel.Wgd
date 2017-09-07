@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Worlds.Model.Civilization.DailyLife;
-using Worlds.Model.Civilization.Shapes;
 using Worlds.Model.Civilization.Symbolizes;
 
 namespace Worlds.Model.Macroscopic.CivilizedCreation
@@ -22,7 +17,6 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
         {
 
         }
-
 
         /// <summary>
         /// 子楼层

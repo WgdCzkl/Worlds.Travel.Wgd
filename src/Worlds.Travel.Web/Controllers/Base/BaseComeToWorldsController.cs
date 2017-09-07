@@ -82,21 +82,13 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
         }
 
-        private List<YuanArea> _selectedAreas;
+
         public List<YuanArea> SelectedAreas
         {
             get
             {
-                if (_selectedAreas == null)
-                {
-                    _selectedAreas = new List<YuanArea>(); 
-                }
-                return _selectedAreas;
-
-            }
-            set
-            {
-                _selectedAreas = value;
+                var list = SessionHelper.Get<List<YuanArea>>(WebConstants.SESSION_KEY_COME_TO_SELECTED_PLANET_AREAS);
+                return list == null ? new List<YuanArea>() : list;
             }
         }
 
@@ -107,6 +99,15 @@ namespace Worlds.Travel.Web.Controllers.Base
                 return SessionHelper.Get<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_TIME);
             }
         }
+
+
+        public void AddSelectedAreas(YuanArea area)
+        {
+            var list = SelectedAreas;
+            list.Add(area);
+            SessionHelper.Add<List<YuanArea>>(WebConstants.SESSION_KEY_COME_TO_SELECTED_PLANET_AREAS, list);
+        }
+
 
 
         public List<YuanArea> GetNewOpenAreas()

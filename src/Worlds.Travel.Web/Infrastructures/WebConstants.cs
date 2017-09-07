@@ -32,6 +32,11 @@ namespace Worlds.Travel.Web.Infrastructures
         public const string SESSION_KEY_COME_TO_PLANET_AREA = "ComeToPlanetArea";
 
         /// <summary>
+        /// 已选择的区域列表
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_SELECTED_PLANET_AREAS = "ComeSelectedToPlanetAreas";
+
+        /// <summary>
         /// 降临的 开放区域列表
         /// </summary>
         public const string SESSION_KEY_COME_TO_OPEN_PLANET_AREAS = "ComeToOpenAreas";
