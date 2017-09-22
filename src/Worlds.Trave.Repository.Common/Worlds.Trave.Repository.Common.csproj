@@ -44,6 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\Earth\2017.96_14.42\China\ShanghaiCity\YangpuDistrict\XinJiangWanJiaYuan\35\7\702\" />
     <Folder Include="App_Data\Worlds\" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +52,7 @@
     <Content Include="App_Data\Earth\2017.96_14.42\China\Areas.xml" />
     <Content Include="App_Data\Earth\2017.96_14.42\China\ShanghaiCity\Areas.xml" />
     <Content Include="App_Data\Earth\2017.96_14.42\China\ShanghaiCity\YangpuDistrict\Areas.xml" />
+    <Content Include="App_Data\Earth\2017.96_14.42\China\ShanghaiCity\YangpuDistrict\XinJiangWanJiaYuan\35\Storeys.xml" />
     <Content Include="App_Data\Earth\PlanetTimes.xml" />
     <Content Include="App_Data\Galaxys\SolarSystem.xml" />
   </ItemGroup>

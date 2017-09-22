@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using Worlds.Model.Civilization.Areas;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.Time;
+using Worlds.Model.Macroscopic.CivilizedCreation;
+using Worlds.Trave.Repository.Common.Helper;
 using Worlds.Travel.Web.Controllers.Base;
 using Worlds.Travel.Web.Infrastructures;
 using Worlds.Travel.Web.Models.ComeTo;
@@ -27,6 +29,20 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToGalaxy()
         {
+            var area = XmlHelper.XML2LTByFilePaht<YuanArea>(@"Earth\2017.96_14.42\China\ShanghaiCity\YangpuDistrict\Areas.xml").FirstOrDefault();
+            var lc = new List<YuanStorey>();
+            lc.Add(new YuanStorey("1楼"));
+            lc.Add(new YuanStorey("2楼"));
+            lc.Add(new YuanStorey("3楼"));
+            lc.Add(new YuanStorey("4楼"));
+            lc.Add(new YuanStorey("5楼"));
+            lc.Add(new YuanStorey("6楼"));
+            lc.Add(new YuanStorey("7楼"));
+            lc.Add(new YuanStorey("8楼"));
+            area.Architectures.FirstOrDefault().SubStoreys = lc;
+            string str = XmlHelper.LT2XML<YuanArchitecture>(area.Architectures);
+
+
             ComeToGalaxyViewModel vm = new ComeToGalaxyViewModel();
             vm.Galaxys = base.OpenGalaxys;
             return View(vm);
@@ -86,33 +102,38 @@ namespace Worlds.Travel.Web.Controllers
                 return View("SceneSelection", "Home");
             }
             base.AddSelectedAreas(currArea);
-  
+
             SessionHelper.Add<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_AREA, currArea);
             SessionHelper.Add<List<YuanArea>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_AREAS, GetNewOpenAreas());
 
-            if (base.OpenAreas.Count > 0)
+            ComeToAreaViewModel vm = new ComeToAreaViewModel();
+            vm.CurrArea = base.CurrArea;
+            vm.Areas = base.OpenAreas;
+
+            if (vm.IsOpenArchitectures)
             {
-                ComeToAreaViewModel vm = new ComeToAreaViewModel();
-                vm.Areas = base.OpenAreas;
-                return View(vm);
+                SessionHelper.Add<List<YuanArchitecture>>(WebConstants.SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE, vm.Architectures);
             }
-            else
-            {
-                ComeToWorldViewModel vm = new ComeToWorldViewModel();
-                vm.CurrArea = base.CurrArea;
-                return View("ComeToWorld", vm);
-            }
+
+            return View(vm);
 
         }
 
+
+        public ActionResult ComeToArchitecture(string keyName)
+        {
+
+            ComeToArchitectureViewModel vm = new ComeToArchitectureViewModel();
+            vm.CurrArchitecture = base.OpenArchitectures.Find(a => a.Name.KeyName == keyName);
+            return View(vm);
+        }
 
 
         //降临到世界
         public ActionResult ComeToWorld(string planetKey)
         {
             ComeToWorldViewModel vm = new ComeToWorldViewModel();
-
-
+            vm.CurrArea = base.CurrArea;
             return View(vm);
         }
 

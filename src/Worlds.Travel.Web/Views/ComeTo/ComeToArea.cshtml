@@ -5,13 +5,31 @@
 
 
 
-<form id="form-login" class="p-t-15" action="@Url.Action("ComeToArea", "ComeTo")" , method="POST">
-    选择星球
-    <select name="areaKeyName">
-        @foreach (var area in Model.Areas)
-        {
-            <option value="@area.Name.KeyName">@area.Name</option>
-        }
-    </select>
-    <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
-</form>
+@if (Model.IsOpenAreas)
+{
+    <form id="form-login" class="p-t-15" action="@Url.Action("ComeToArea", "ComeTo")" , method="POST">
+        选择区域
+        <select name="areaKeyName">
+            @foreach (var area in Model.Areas)
+            {
+                <option value="@area.Name.KeyName">@area.Name</option>
+            }
+        </select>
+        <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+    </form>
+}
+@if (Model.IsOpenArchitectures)
+{
+    <form id="form-login" class="p-t-15" action="@Url.Action("ComeToArchitecture", "ComeTo")" , method="POST">
+        选择建筑
+        <select name="areaKeyName">
+            @foreach (var item in Model.Architectures)
+            {
+                <option value="@item.Name.KeyName">@item.Name</option>
+            }
+        </select>
+        <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
+    </form>
+
+
+}

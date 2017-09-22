@@ -57,13 +57,11 @@ namespace IndividualWorlds.Service.Planets
         /// <summary>
         /// 获取开发区域
         /// </summary>
-        /// <param name="planetKeyName">星球KeyName</param>
-        /// <param name="planetTimeKeyName">星期时间KeyName</param>
         /// <returns></returns>
-        public List<YuanArea> GetOpenYuanAreas(string planetKeyName, string planetTimeKeyName)
+        public List<YuanArea> GetOpenYuanAreas(string path)
         {
 
-            return XmlHelper.XML2LTByFilePaht<YuanArea>(string.Format(@"{0}\{1}\Areas.xml", planetKeyName, planetTimeKeyName));
+            return XmlHelper.XML2LTByFilePaht<YuanArea>(string.Format(@"{0}\Areas.xml", path));
         }
 
 

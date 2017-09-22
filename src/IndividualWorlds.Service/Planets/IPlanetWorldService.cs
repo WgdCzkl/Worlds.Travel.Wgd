@@ -20,7 +20,7 @@ namespace IndividualWorlds.Service.Planets
 
         List<PlanetTime> GetOpenPlanetTimes(string planetKey);
 
-        List<YuanArea> GetOpenYuanAreas(string planetKeyName, string planetTimeKeyName);
+        List<YuanArea> GetOpenYuanAreas(string path);
 
         PlanetWorldOpenInfoDTO GetOpenInfoByPlanetKey(string planetKey);
     }

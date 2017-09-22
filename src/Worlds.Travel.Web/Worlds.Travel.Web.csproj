@@ -158,6 +158,7 @@
     <Compile Include="Infrastructures\SessionHelper.cs" />
     <Compile Include="Infrastructures\WebConstants.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToArchitectureViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToPlanetTimeViewModel.cs" />
     <Compile Include="Models\Home\SceneSelectionViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToAreaViewModel.cs" />
@@ -185,6 +186,7 @@
     <Content Include="Views\ComeTo\ComeToGalaxy.cshtml" />
     <Content Include="Views\ComeTo\ComeToPlanet.cshtml" />
     <Content Include="Views\ComeTo\ComeToPlanetTime.cshtml" />
+    <Content Include="Views\ComeTo\ComeToArchitecture.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,6 +220,10 @@
     <ProjectReference Include="..\Worlds.Model\Worlds.Model.csproj">
       <Project>{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}</Project>
       <Name>Worlds.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Worlds.Trave.Repository.Common\Worlds.Trave.Repository.Common.csproj">
+      <Project>{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}</Project>
+      <Name>Worlds.Trave.Repository.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Worlds.Travel.AccountService\Worlds.Travel.AccountService.csproj">
       <Project>{C34578B6-C015-47AE-8F3D-9D31F3325BE9}</Project>

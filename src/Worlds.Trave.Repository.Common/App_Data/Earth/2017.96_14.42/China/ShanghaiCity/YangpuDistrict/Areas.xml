@@ -8,5 +8,113 @@
       <Name>新江湾佳苑</Name>
     </Name>
     <AreaGrade>0</AreaGrade>
+    <Architectures>
+      <YuanArchitecture>
+        <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
+        <Name>
+          <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
+          <Name>35栋</Name>
+          <NickNames />
+          <UsedNames />
+        </Name>
+        <SubStoreys>
+          <YuanStorey>
+            <ID>8aaab101-5b1f-4b00-ad45-ab82dc51ff5a</ID>
+            <Name>
+              <ID>bc110cf9-078a-4be1-99a7-ee20c59bdf6e</ID>
+              <Name>1楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>d028b4f8-913f-43bc-b919-855b0e1d1d09</ID>
+            <Name>
+              <ID>6f8382b5-a6a6-43fc-8648-fe8d3279a0c7</ID>
+              <Name>2楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>a6a9fb54-4d64-477d-afbe-535f68059c8e</ID>
+            <Name>
+              <ID>caac45ac-ca59-476f-8cd7-bb5cc43ad2b8</ID>
+              <Name>3楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>d62d8d1f-f9de-4f83-ba17-df8e7484b5fc</ID>
+            <Name>
+              <ID>1b613420-1fd2-4c34-bb6e-0b784cf4fc14</ID>
+              <Name>4楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>b5c9e722-49ce-43eb-86ea-e6d2cdeb7a23</ID>
+            <Name>
+              <ID>cb237557-a7bb-4021-980a-65d56e013aec</ID>
+              <Name>5楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>43681f14-dcf0-4c8f-bd2e-b6ce29f5d9f0</ID>
+            <Name>
+              <ID>35aad09f-deb5-4c74-9c51-115057ba5b16</ID>
+              <Name>6楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>a4231be1-eebc-4fbf-8f6c-0769a0e25fc4</ID>
+            <Name>
+              <ID>bdd2aefd-aec3-45f6-a61e-0e9f3f9b33f8</ID>
+              <Name>7楼</Name>
+            </Name>
+          </YuanStorey>
+          <YuanStorey>
+            <ID>1e3d77e6-f34f-4dac-928b-d32b55cb65d9</ID>
+            <Name>
+              <ID>521605a0-4f60-4f83-b30b-5283b1dcd949</ID>
+              <Name>8楼</Name>
+            </Name>
+          </YuanStorey>
+        </SubStoreys>
+        <Elevators />
+        <Staircases />
+      </YuanArchitecture>
+      <YuanArchitecture>
+        <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
+        <Name>
+          <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
+          <Name>36栋</Name>
+          <NickNames />
+          <UsedNames />
+        </Name>
+        <SubStoreys />
+        <Elevators />
+        <Staircases />
+      </YuanArchitecture>
+    </Architectures>
+  </YuanArea>
+  <YuanArea>
+    <ID>3fe3f4d0-c86f-45a9-98a8-0f5bc84cba78</ID>
+    <Name>
+      <ID>b0963595-3bda-44ac-bb90-995d5887c1a9</ID>
+      <KeyName>ChangZhiTianDiQiYiZhongXin</KeyName>
+      <Name>创智天地企业中心</Name>
+    </Name>
+    <AreaGrade>0</AreaGrade>
+    <Architectures>
+      <YuanArchitecture>
+        <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
+        <Name>
+          <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
+          <Name>1号楼</Name>
+        </Name>
+      </YuanArchitecture>
+      <YuanArchitecture>
+        <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
+        <Name>
+          <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
+          <Name>2号楼</Name>
+        </Name>
+      </YuanArchitecture>
+    </Architectures>
   </YuanArea>
 </ArrayOfYuanArea>

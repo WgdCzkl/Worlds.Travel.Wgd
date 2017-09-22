@@ -40,6 +40,29 @@ namespace Worlds.Travel.Web.Infrastructures
         /// 降临的 开放区域列表
         /// </summary>
         public const string SESSION_KEY_COME_TO_OPEN_PLANET_AREAS = "ComeToOpenAreas";
+
+
+
+        /// <summary>
+        /// 降临的区域 建筑
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_AREA_ARCHITECTURE = "ComeToAreaArchitecture";
+
+        /// <summary>
+        /// 降临的区域 开放的建筑
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE = "ComeToOpenAreaArchitectures";
+
+
+        /// <summary>
+        /// 降临的 楼层
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_PLANET_STOREY = "ComeToStorey";
+
+        /// <summary>
+        /// 降临的 开放楼层列表
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_OPEN_PLANET_STOREYS = "ComeToOpenStoreys";
         #endregion
 
         /// <summary>

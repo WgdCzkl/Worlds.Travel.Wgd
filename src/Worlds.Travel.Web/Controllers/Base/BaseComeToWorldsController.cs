@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Worlds.Model.Civilization.Areas;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.Time;
+using Worlds.Model.Macroscopic.CivilizedCreation;
 using Worlds.Travel.Web.Infrastructures;
 
 namespace Worlds.Travel.Web.Controllers.Base
@@ -38,8 +39,6 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
         }
 
-
-
         public List<Planet> OpenPlanets
         {
             get
@@ -55,8 +54,6 @@ namespace Worlds.Travel.Web.Controllers.Base
                 return SessionHelper.Get<Planet>(WebConstants.SESSION_KEY_COME_TO_PLANET);
             }
         }
-
-
 
         public List<PlanetTime> OpenPlanetTimes
         {
@@ -82,7 +79,6 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
         }
 
-
         public List<YuanArea> SelectedAreas
         {
             get
@@ -96,10 +92,18 @@ namespace Worlds.Travel.Web.Controllers.Base
         {
             get
             {
-                return SessionHelper.Get<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_TIME);
+                return SessionHelper.Get<YuanArea>(WebConstants.SESSION_KEY_COME_TO_PLANET_AREA);
             }
         }
 
+
+        public List<YuanArchitecture> OpenArchitectures
+        {
+            get
+            {
+                return SessionHelper.Get<List<YuanArchitecture>>(WebConstants.SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE);
+            }
+        }
 
         public void AddSelectedAreas(YuanArea area)
         {
@@ -108,16 +112,14 @@ namespace Worlds.Travel.Web.Controllers.Base
             SessionHelper.Add<List<YuanArea>>(WebConstants.SESSION_KEY_COME_TO_SELECTED_PLANET_AREAS, list);
         }
 
-
-
         public List<YuanArea> GetNewOpenAreas()
         {
-            string path = CurrPlanetTime.KeyName;
+            string path = string.Format(@"{0}\{1}", CurrPlanet.Name.KeyName, CurrPlanetTime.KeyName);
             foreach (var item in SelectedAreas)
             {
                 path = string.Format(@"{0}\{1}", path, item.Name.KeyName);
             }
-            return _planetWorldService.GetOpenYuanAreas(CurrPlanet.Name.KeyName, path);
+            return _planetWorldService.GetOpenYuanAreas(path);
         }
 
     }
