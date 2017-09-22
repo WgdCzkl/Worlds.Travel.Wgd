@@ -18,6 +18,7 @@ namespace Worlds.Model.Civilization.Symbolizes
         public YuanName(string name)
         {
             Name = name;
+            KeyName = name;
         }
 
         public YuanName(string name,string keyName)

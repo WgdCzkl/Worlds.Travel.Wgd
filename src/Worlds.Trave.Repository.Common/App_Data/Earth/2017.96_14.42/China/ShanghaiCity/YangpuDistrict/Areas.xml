@@ -19,58 +19,92 @@
         </Name>
         <SubStoreys>
           <YuanStorey>
-            <ID>8aaab101-5b1f-4b00-ad45-ab82dc51ff5a</ID>
+            <ID>a86760ef-d4c4-4c93-b3c3-9e344b55bc11</ID>
             <Name>
-              <ID>bc110cf9-078a-4be1-99a7-ee20c59bdf6e</ID>
+              <ID>168a6707-7821-4842-9968-2ca5bbca6145</ID>
+              <KeyName>1楼</KeyName>
               <Name>1楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>d028b4f8-913f-43bc-b919-855b0e1d1d09</ID>
+            <ID>d325242e-9c92-4365-a817-a80a6b17a479</ID>
             <Name>
-              <ID>6f8382b5-a6a6-43fc-8648-fe8d3279a0c7</ID>
+              <ID>f3ec133b-87c5-4ab2-9ca8-fb7ee82b4015</ID>
+              <KeyName>2楼</KeyName>
               <Name>2楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>a6a9fb54-4d64-477d-afbe-535f68059c8e</ID>
+            <ID>e0f7a2c1-7f42-4504-a971-4510bd6fbe56</ID>
             <Name>
-              <ID>caac45ac-ca59-476f-8cd7-bb5cc43ad2b8</ID>
+              <ID>4779aa4f-cc81-4e18-9ee8-8babdbc67f19</ID>
+              <KeyName>3楼</KeyName>
               <Name>3楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>d62d8d1f-f9de-4f83-ba17-df8e7484b5fc</ID>
+            <ID>fe331f2b-ecf0-4542-9672-87b93210ad3f</ID>
             <Name>
-              <ID>1b613420-1fd2-4c34-bb6e-0b784cf4fc14</ID>
+              <ID>ffe69c6f-9956-4774-9550-454a3558df5c</ID>
+              <KeyName>4楼</KeyName>
               <Name>4楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>b5c9e722-49ce-43eb-86ea-e6d2cdeb7a23</ID>
+            <ID>dc371c35-1b92-49ba-bf1c-8c455fbaf4b5</ID>
             <Name>
-              <ID>cb237557-a7bb-4021-980a-65d56e013aec</ID>
+              <ID>45aadc5d-1c86-4106-813f-ef3a1c30e9b6</ID>
+              <KeyName>5楼</KeyName>
               <Name>5楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>43681f14-dcf0-4c8f-bd2e-b6ce29f5d9f0</ID>
+            <ID>67fe804c-053a-498f-b596-ef974b8845b6</ID>
             <Name>
-              <ID>35aad09f-deb5-4c74-9c51-115057ba5b16</ID>
+              <ID>c0fd14ca-99ec-4345-8b5e-9fb4467ba132</ID>
+              <KeyName>6楼</KeyName>
               <Name>6楼</Name>
             </Name>
           </YuanStorey>
           <YuanStorey>
-            <ID>a4231be1-eebc-4fbf-8f6c-0769a0e25fc4</ID>
+            <ID>62ad0f9c-957f-4c22-a62f-ce5673a78150</ID>
             <Name>
-              <ID>bdd2aefd-aec3-45f6-a61e-0e9f3f9b33f8</ID>
+              <ID>e51c0558-362d-484e-9713-da59ed6f4c61</ID>
+              <KeyName>7楼</KeyName>
               <Name>7楼</Name>
             </Name>
+            <Rooms>
+              <YuanRoom>
+                <ID>4e2fab76-96df-4fe2-a6f8-4ad3e8318273</ID>
+                <Name>
+                  <ID>4207903c-5006-4039-a152-6fceb53f5dbb</ID>
+                  <KeyName>701</KeyName>
+                  <Name>701</Name>
+                </Name>
+              </YuanRoom>
+              <YuanRoom>
+                <ID>4b8bdeef-2dca-4e05-b443-bfd835b3dfed</ID>
+                <Name>
+                  <ID>7df9de61-b72a-495a-b691-3889059f2f54</ID>
+                  <KeyName>702</KeyName>
+                  <Name>702</Name>
+                </Name>
+              </YuanRoom>
+              <YuanRoom>
+                <ID>c5d96f1f-b517-4bda-a0b9-ea8d8fcd62cb</ID>
+                <Name>
+                  <ID>4096aca9-1e03-4790-9781-3f1fff22ec26</ID>
+                  <KeyName>703</KeyName>
+                  <Name>703</Name>
+                </Name>
+              </YuanRoom>
+            </Rooms>
           </YuanStorey>
           <YuanStorey>
-            <ID>1e3d77e6-f34f-4dac-928b-d32b55cb65d9</ID>
+            <ID>ccb47be6-09c8-4ae6-ac98-e2771613b611</ID>
             <Name>
-              <ID>521605a0-4f60-4f83-b30b-5283b1dcd949</ID>
+              <ID>1d64d423-5881-4eff-9fad-a18bab0b428f</ID>
+              <KeyName>8楼</KeyName>
               <Name>8楼</Name>
             </Name>
           </YuanStorey>

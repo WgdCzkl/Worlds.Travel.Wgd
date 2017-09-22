@@ -23,7 +23,6 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
         /// </summary>
         public List<YuanStorey> SubStoreys { get; set; }
 
-
         /// <summary>
         /// 电梯
         /// </summary>
@@ -54,5 +53,15 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
         /// 内部建筑
         /// </summary>
         public List<YuanCivilizedCreation> SubArchitecture { get; set; }
+
+        /// <summary>
+        /// 房间
+        /// </summary>
+        public List<YuanRoom> Rooms { get; set; }
+
+        /// <summary>
+        /// 楼梯
+        /// </summary>
+        public List<YuanStaircase> Staircases { get; set; }
     }
 }

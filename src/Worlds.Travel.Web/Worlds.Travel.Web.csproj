@@ -160,6 +160,7 @@
     <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToArchitectureViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToPlanetTimeViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToStoreyViewModel.cs" />
     <Compile Include="Models\Home\SceneSelectionViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToAreaViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToGalaxyViewModel.cs" />
@@ -187,6 +188,7 @@
     <Content Include="Views\ComeTo\ComeToPlanet.cshtml" />
     <Content Include="Views\ComeTo\ComeToPlanetTime.cshtml" />
     <Content Include="Views\ComeTo\ComeToArchitecture.cshtml" />
+    <Content Include="Views\ComeTo\ComeToStorey.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

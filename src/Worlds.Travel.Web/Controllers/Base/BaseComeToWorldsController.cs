@@ -97,11 +97,36 @@ namespace Worlds.Travel.Web.Controllers.Base
         }
 
 
+        public YuanArchitecture CurrArchitecture
+        {
+            get
+            {
+                return SessionHelper.Get<YuanArchitecture>(WebConstants.SESSION_KEY_COME_TO_AREA_ARCHITECTURE);
+            }
+        }
+
+
         public List<YuanArchitecture> OpenArchitectures
         {
             get
             {
                 return SessionHelper.Get<List<YuanArchitecture>>(WebConstants.SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE);
+            }
+        }
+
+        public YuanStorey CurrStorey
+        {
+            get
+            {
+                return SessionHelper.Get<YuanStorey>(WebConstants.SESSION_KEY_COME_TO_PLANET_STOREY);
+            }
+        }
+
+        public List<YuanStorey> OpenStoreys
+        {
+            get
+            {
+                return SessionHelper.Get<List<YuanStorey>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_STOREYS);
             }
         }
 

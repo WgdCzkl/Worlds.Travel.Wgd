@@ -1,18 +1,14 @@
-﻿@model Worlds.Travel.Web.Models.ComeTo.ComeToArchitectureViewModel
-
+﻿@model Worlds.Travel.Web.Models.ComeTo.ComeToStoreyViewModel
 @{
-    ViewBag.Title = "ComeToArchitecture";
+    ViewBag.Title = "ComeToStorey";
 }
-
 <form id="form-login" class="p-t-15" action="@Url.Action("ComeToStorey", "ComeTo")" , method="POST">
-    选择楼层
+    选择房间
     <select name="keyName">
-        @foreach (var item in Model.Storeys)
+        @foreach (var item in Model.Rooms)
         {
             <option value="@item.Name.KeyName">@item.Name</option>
         }
     </select>
     <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
 </form>
-
-

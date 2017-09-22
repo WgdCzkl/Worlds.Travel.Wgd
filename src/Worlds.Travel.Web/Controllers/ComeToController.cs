@@ -21,8 +21,6 @@ namespace Worlds.Travel.Web.Controllers
         {
         }
 
-
-
         /// <summary>
         /// 降临到星系
         /// </summary>
@@ -37,7 +35,12 @@ namespace Worlds.Travel.Web.Controllers
             lc.Add(new YuanStorey("4楼"));
             lc.Add(new YuanStorey("5楼"));
             lc.Add(new YuanStorey("6楼"));
-            lc.Add(new YuanStorey("7楼"));
+            var storey = new YuanStorey("7楼");
+            storey.Rooms = new List<YuanRoom>();
+            storey.Rooms.Add(new YuanRoom("701"));
+            storey.Rooms.Add(new YuanRoom("702"));
+            storey.Rooms.Add(new YuanRoom("703"));
+            lc.Add(storey);
             lc.Add(new YuanStorey("8楼"));
             area.Architectures.FirstOrDefault().SubStoreys = lc;
             string str = XmlHelper.LT2XML<YuanArchitecture>(area.Architectures);
@@ -73,7 +76,6 @@ namespace Worlds.Travel.Web.Controllers
             return View(vm);
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -87,7 +89,6 @@ namespace Worlds.Travel.Web.Controllers
             vm.Areas = base.OpenAreas;
             return View("ComeToArea", vm);
         }
-
 
         /// <summary>
         /// 降临到区域
@@ -119,31 +120,43 @@ namespace Worlds.Travel.Web.Controllers
 
         }
 
-
+        /// <summary>
+        /// 降临到建筑
+        /// </summary>
+        /// <param name="keyName"></param>
+        /// <returns></returns>
         public ActionResult ComeToArchitecture(string keyName)
         {
 
             ComeToArchitectureViewModel vm = new ComeToArchitectureViewModel();
             vm.CurrArchitecture = base.OpenArchitectures.Find(a => a.Name.KeyName == keyName);
+            SessionHelper.Add<List<YuanStorey>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_STOREYS, vm.Storeys);
             return View(vm);
         }
 
+        /// <summary>
+        /// 降临到楼层
+        /// </summary>
+        /// <param name="keyName"></param>
+        /// <returns></returns>
+        public ActionResult ComeToStorey(string keyName)
+        {
+            ComeToStoreyViewModel vm = new ComeToStoreyViewModel();
+            vm.CurrStorey = base.OpenStoreys.Find(a => a.Name.KeyName == keyName);
+            return View(vm);
+        }
 
-        //降临到世界
+        /// <summary>
+        /// 降临到世界
+        /// </summary>
+        /// <param name="planetKey"></param>
+        /// <returns></returns>
         public ActionResult ComeToWorld(string planetKey)
         {
             ComeToWorldViewModel vm = new ComeToWorldViewModel();
             vm.CurrArea = base.CurrArea;
             return View(vm);
         }
-
-
-
-
-
-
-
-
 
     }
 }
