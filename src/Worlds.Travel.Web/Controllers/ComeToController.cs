@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Worlds.Model.Civilization.Areas;
+using Worlds.Model.Civilization.DailyLife;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.Time;
 using Worlds.Model.Macroscopic.CivilizedCreation;
@@ -28,23 +29,13 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToGalaxy()
         {
             var area = XmlHelper.XML2LTByFilePaht<YuanArea>(@"Earth\2017.96_14.42\China\ShanghaiCity\YangpuDistrict\Areas.xml").FirstOrDefault();
-            var lc = new List<YuanStorey>();
-            lc.Add(new YuanStorey("1楼"));
-            lc.Add(new YuanStorey("2楼"));
-            lc.Add(new YuanStorey("3楼"));
-            lc.Add(new YuanStorey("4楼"));
-            lc.Add(new YuanStorey("5楼"));
-            lc.Add(new YuanStorey("6楼"));
-            var storey = new YuanStorey("7楼");
-            storey.Rooms = new List<YuanRoom>();
-            storey.Rooms.Add(new YuanRoom("701"));
-            storey.Rooms.Add(new YuanRoom("702"));
-            storey.Rooms.Add(new YuanRoom("703"));
-            lc.Add(storey);
-            lc.Add(new YuanStorey("8楼"));
-            area.Architectures.FirstOrDefault().SubStoreys = lc;
-            string str = XmlHelper.LT2XML<YuanArchitecture>(area.Architectures);
 
+            var lc = new List<YuanRoad>();
+            lc.Add(new YuanRoad("政立路"));
+            lc.Add(new YuanRoad("政学路"));
+            lc.Add(new YuanRoad("淞沪路"));
+            area.Roads = lc;
+            string str = XmlHelper.T2XML<YuanArea>(area);
 
             ComeToGalaxyViewModel vm = new ComeToGalaxyViewModel();
             vm.Galaxys = base.OpenGalaxys;
@@ -116,6 +107,10 @@ namespace Worlds.Travel.Web.Controllers
                 SessionHelper.Add<List<YuanArchitecture>>(WebConstants.SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE, vm.Architectures);
             }
 
+            if (vm.IsOpenRoads)
+            {
+                SessionHelper.Add<List<YuanRoad>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_ROADS, vm.Roads);
+            }
             return View(vm);
 
         }
@@ -143,6 +138,18 @@ namespace Worlds.Travel.Web.Controllers
         {
             ComeToStoreyViewModel vm = new ComeToStoreyViewModel();
             vm.CurrStorey = base.OpenStoreys.Find(a => a.Name.KeyName == keyName);
+            return View(vm);
+        }
+
+        /// <summary>
+        /// 降临到路
+        /// </summary>
+        /// <param name="keyName"></param>
+        /// <returns></returns>
+        public ActionResult ComeToRoad(string keyName)
+        {
+            ComeToRoadViewModel vm = new ComeToRoadViewModel();
+            vm.CurrRoad = base.OpenRoads.Find(a => a.Name.KeyName == keyName);
             return View(vm);
         }
 

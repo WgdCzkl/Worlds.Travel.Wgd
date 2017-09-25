@@ -46,5 +46,28 @@ namespace Worlds.Travel.Web.Models.ComeTo
                 return Architectures != null && Architectures.Count > 0;
             }
         }
+
+
+
+        /// <summary>
+        /// 道路
+        /// </summary>
+        public List<YuanRoad> Roads
+        {
+            get
+            {
+                if (IsComeToArea)
+                    return CurrArea.Roads;
+                return null;
+            }
+        }
+
+        public Boolean IsOpenRoads
+        {
+            get
+            {
+                return Roads != null && Roads.Count > 0;
+            }
+        }
     }
 }

@@ -22,7 +22,6 @@ namespace Worlds.Travel.Web.Controllers.Base
             _planetWorldService = planetWorldService;
         }
 
-
         public List<Galaxy> OpenGalaxys
         {
             get
@@ -96,7 +95,6 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
         }
 
-
         public YuanArchitecture CurrArchitecture
         {
             get
@@ -104,7 +102,6 @@ namespace Worlds.Travel.Web.Controllers.Base
                 return SessionHelper.Get<YuanArchitecture>(WebConstants.SESSION_KEY_COME_TO_AREA_ARCHITECTURE);
             }
         }
-
 
         public List<YuanArchitecture> OpenArchitectures
         {
@@ -130,6 +127,22 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
         }
 
+        public YuanRoad  CurrRoad
+        {
+            get
+            {
+                return SessionHelper.Get<YuanRoad>(WebConstants.SESSION_KEY_COME_TO_PLANET_ROAD);
+            }
+        }
+
+        public List<YuanRoad> OpenRoads
+        {
+            get
+            {
+                return SessionHelper.Get<List<YuanRoad>>(WebConstants.SESSION_KEY_COME_TO_OPEN_PLANET_ROADS);
+            }
+        }
+
         public void AddSelectedAreas(YuanArea area)
         {
             var list = SelectedAreas;
@@ -146,6 +159,8 @@ namespace Worlds.Travel.Web.Controllers.Base
             }
             return _planetWorldService.GetOpenYuanAreas(path);
         }
+
+
 
     }
 }

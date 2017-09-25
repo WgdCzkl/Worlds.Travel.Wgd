@@ -8,6 +8,32 @@
       <Name>杨浦区</Name>
     </Name>
     <AreaGrade>0</AreaGrade>
+    <Roads>
+      <YuanRoad>
+        <ID>32f8522a-98f7-4fae-80c8-d93dec843a6e</ID>
+        <Name>
+          <ID>d98e5f26-f22d-4e46-980a-9c1403875290</ID>
+          <KeyName>政立路</KeyName>
+          <Name>政立路</Name>
+        </Name>
+      </YuanRoad>
+      <YuanRoad>
+        <ID>ff1962b7-407c-4fb5-8391-e7cdfc7e8ef3</ID>
+        <Name>
+          <ID>8181d6dc-4c2e-4ac2-b41d-d560d97d7062</ID>
+          <KeyName>政学路</KeyName>
+          <Name>政学路</Name>
+        </Name>
+      </YuanRoad>
+      <YuanRoad>
+        <ID>683fa34c-7d75-4f20-90bc-8e6455bcf1e3</ID>
+        <Name>
+          <ID>0f6f415f-d3cb-4122-8b7d-f12bdf99eeae</ID>
+          <KeyName>淞沪路</KeyName>
+          <Name>淞沪路</Name>
+        </Name>
+      </YuanRoad>
+    </Roads>
   </YuanArea>
   <YuanArea>
     <ID>9fb0a5b8-8db0-4f72-8919-798937a6ffff</ID>

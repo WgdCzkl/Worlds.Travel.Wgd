@@ -63,6 +63,16 @@ namespace Worlds.Travel.Web.Infrastructures
         /// 降临的 开放楼层列表
         /// </summary>
         public const string SESSION_KEY_COME_TO_OPEN_PLANET_STOREYS = "ComeToOpenStoreys";
+
+        /// <summary>
+        /// 降临的 道路
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_PLANET_ROAD = "ComeToRoad";
+
+        /// <summary>
+        /// 降临的 开放道路列表
+        /// </summary>
+        public const string SESSION_KEY_COME_TO_OPEN_PLANET_ROADS = "ComeToOpenRoads";
         #endregion
 
         /// <summary>
