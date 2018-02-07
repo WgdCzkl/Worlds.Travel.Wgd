@@ -65,12 +65,17 @@
     <Compile Include="Dimension\Speed\LineSpeed.cs" />
     <Compile Include="Dimension\Time\PlanetTime.cs" />
     <Compile Include="Dimension\Time\YuanTime.cs" />
+    <Compile Include="Dimension\Volume\CoordinateThree.cs" />
+    <Compile Include="Dimension\Volume\CoordinateTwo.cs" />
     <Compile Include="Dimension\Volume\YuanLength.cs" />
+    <Compile Include="Extensions\BzStringExtensions.cs" />
+    <Compile Include="Games\ComeToModel.cs" />
     <Compile Include="Macroscopic\Animals\Human.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanCivilizedCreation.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanRoad.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanArchitecture.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanRoom.cs" />
+    <Compile Include="Macroscopic\CivilizedCreation\YuanSuite.cs" />
     <Compile Include="Microcosmic\Biology\Tissues\YuanEye.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Yuan.cs" />

@@ -16,5 +16,14 @@ namespace Worlds.Model.Dimension.Volume
         public YuanLength(decimal value) : base(value)
         {
         }
+
+        /// <summary>
+        /// 自定义 隐式转换
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator YuanLength(Decimal value)
+        {
+            return new YuanLength(value);
+        }
     }
 }

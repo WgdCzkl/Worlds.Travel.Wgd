@@ -16,6 +16,7 @@
         <Name>地球</Name>
         <KeyName>Earth</KeyName>
       </Name>
+      
     </CenterPlanet>
     <SurroundPlanets>
       <Planet>
@@ -27,6 +28,12 @@
           <Name>地球</Name>
           <KeyName>Earth</KeyName>
         </Name>
+        <OpenPlanetTimes>
+          <PlanetTime>
+            <RevolutionNumber>2017.96</RevolutionNumber>
+            <RotationNumber>14.42</RotationNumber>
+          </PlanetTime>
+        </OpenPlanetTimes>
       </Planet>
       <Planet>
         <ID>31f70f6e-bfca-42ea-a339-fcb76c4902ac</ID>

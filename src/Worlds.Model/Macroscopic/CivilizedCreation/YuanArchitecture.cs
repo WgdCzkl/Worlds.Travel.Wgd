@@ -55,9 +55,9 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
         public List<YuanCivilizedCreation> SubArchitecture { get; set; }
 
         /// <summary>
-        /// 房间
+        /// 套房
         /// </summary>
-        public List<YuanRoom> Rooms { get; set; }
+        public List<YuanSuite> SuiteRooms { get; set; }
 
         /// <summary>
         /// 楼梯

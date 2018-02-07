@@ -10,70 +10,11 @@ namespace Worlds.Travel.Web.Infrastructures
 
         #region Session
 
-        #region Come To
         /// <summary>
-        /// 降临的星系
+        /// 降临的对象
         /// </summary>
-        public const string SESSION_KEY_COME_TO_GALAXY = "ComeToGalaxy";
+        public const string SESSION_KEY_COME_TO_MODEL = "ComeToModel";
 
-        /// <summary>
-        /// 降临的星球
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_PLANET = "ComeToPlanet";
-
-        /// <summary>
-        /// 降临的时间
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_PLANET_TIME = "ComeToPlanetTime";
-
-        /// <summary>
-        /// 降临的区域
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_PLANET_AREA = "ComeToPlanetArea";
-
-        /// <summary>
-        /// 已选择的区域列表
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_SELECTED_PLANET_AREAS = "ComeSelectedToPlanetAreas";
-
-        /// <summary>
-        /// 降临的 开放区域列表
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_OPEN_PLANET_AREAS = "ComeToOpenAreas";
-
-
-
-        /// <summary>
-        /// 降临的区域 建筑
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_AREA_ARCHITECTURE = "ComeToAreaArchitecture";
-
-        /// <summary>
-        /// 降临的区域 开放的建筑
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_OPEN_AREA_ARCHITECTURE = "ComeToOpenAreaArchitectures";
-
-
-        /// <summary>
-        /// 降临的 楼层
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_PLANET_STOREY = "ComeToStorey";
-
-        /// <summary>
-        /// 降临的 开放楼层列表
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_OPEN_PLANET_STOREYS = "ComeToOpenStoreys";
-
-        /// <summary>
-        /// 降临的 道路
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_PLANET_ROAD = "ComeToRoad";
-
-        /// <summary>
-        /// 降临的 开放道路列表
-        /// </summary>
-        public const string SESSION_KEY_COME_TO_OPEN_PLANET_ROADS = "ComeToOpenRoads";
-        #endregion
 
         /// <summary>
         /// 护照信息

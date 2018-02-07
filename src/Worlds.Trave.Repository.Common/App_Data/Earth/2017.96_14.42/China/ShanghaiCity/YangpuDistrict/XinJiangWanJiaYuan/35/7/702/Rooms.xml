@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<YuanRoom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>d6f1aadb-871c-44eb-b51f-28954bad2f83</ID>
+  <Name>
+    <ID>f9ee4b11-b71b-4902-8ff8-ed59ee690c24</ID>
+    <KeyName>702</KeyName>
+    <Name>702</Name>
+  </Name>
+  <SubCivilizedCreations>
+    <YuanCivilizedCreation>
+      <ID>b9af81ec-fac9-42c7-8801-45c4429cca9b</ID>
+      <Name>
+        <ID>61bd7cb4-3cc3-4a15-8df8-fd71bb2d4602</ID>
+        <KeyName>床</KeyName>
+        <Name>床</Name>
+      </Name>
+    </YuanCivilizedCreation>
+    <YuanCivilizedCreation>
+      <ID>bd1d5a5b-a865-43d6-a994-eb32712ad688</ID>
+      <Name>
+        <ID>98d8e6cf-0325-4286-9339-e53db47d2b7b</ID>
+        <KeyName>柜子</KeyName>
+        <Name>柜子</Name>
+      </Name>
+    </YuanCivilizedCreation>
+    <YuanCivilizedCreation>
+      <ID>71b77f51-dd2d-44c6-ae63-40af95f63725</ID>
+      <Name>
+        <ID>3fff6c5b-84a8-480a-84aa-cc53841337cb</ID>
+        <KeyName>椅子</KeyName>
+        <Name>椅子</Name>
+      </Name>
+    </YuanCivilizedCreation>
+    <YuanCivilizedCreation>
+      <ID>c4f1496a-6cf4-4610-8beb-ad9f3ea14ef0</ID>
+      <Name>
+        <ID>b320aaa4-4b91-495c-baac-3dd7cf378454</ID>
+        <KeyName>电脑</KeyName>
+        <Name>电脑</Name>
+      </Name>
+    </YuanCivilizedCreation>
+  </SubCivilizedCreations>
+</YuanRoom>

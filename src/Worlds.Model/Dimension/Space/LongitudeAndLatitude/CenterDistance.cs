@@ -18,5 +18,16 @@ namespace Worlds.Model.Dimension.Space.LongitudeAndLatitude
         public CenterDistance(decimal value) : base(value)
         {
         }
+
+        #region 隐式转换
+        /// <summary>
+        /// 自定义 隐式转换
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator CenterDistance(Decimal value)
+        {
+            return new CenterDistance(value);
+        }
+        #endregion
     }
 }

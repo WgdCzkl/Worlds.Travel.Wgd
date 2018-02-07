@@ -8,19 +8,19 @@ using Worlds.Model.Civilization.Symbolizes;
 namespace Worlds.Model.Macroscopic.CivilizedCreation
 {
     /// <summary>
-    /// 房间
+    /// 套房
     /// </summary>
-    public class YuanRoom : YuanCivilizedCreation
+    public class YuanSuite : YuanCivilizedCreation
     {
-        public YuanRoom()
+        public YuanSuite()
         {
 
         }
-        public YuanRoom(YuanName name) : base(name)
+        public YuanSuite(YuanName name) : base(name)
         {
 
         }
 
-       
+        public List<YuanRoom> Rooms { get; set; }
     }
 }

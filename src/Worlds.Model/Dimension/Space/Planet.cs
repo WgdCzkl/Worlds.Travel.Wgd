@@ -105,6 +105,12 @@ namespace Worlds.Model.Dimension.Space
         }
         #endregion
 
+        #region 时间
+        /// <summary>
+        /// 开放时间
+        /// </summary>
+        public List<PlanetTime> OpenPlanetTimes { get; set; }
+        #endregion
 
         /// <summary>
         /// 获取大概时间

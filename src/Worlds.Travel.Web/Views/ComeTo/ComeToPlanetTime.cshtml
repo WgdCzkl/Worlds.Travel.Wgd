@@ -11,7 +11,7 @@
     <select name="planetTiemKeyName">
         @foreach (var planet in Model.PlanetTimes)
         {
-            <option value="@planet.KeyName">@planet.ToEarthTime()</option>
+            <option value="@planet.Key">@planet.ToEarthTime()</option>
         }
     </select>
     <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>

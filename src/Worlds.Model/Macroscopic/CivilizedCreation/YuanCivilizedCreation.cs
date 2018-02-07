@@ -23,15 +23,39 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
         {
             Name = name;
         }
+        public YuanCivilizedCreation(YuanName name, YuanShape shape)
+        {
+            Name = name;
 
+        }
         /// <summary>
         /// 名称
         /// </summary>
         public YuanName Name { get; set; }
 
+        public string KeyName
+        {
+            get
+            {
+                return Name.KeyName;
+            }
+        }
+
         /// <summary>
         /// 外形
         /// </summary>
         public YuanShape Shape { get; set; }
+
+
+        /// <summary>
+        /// 子造物
+        /// </summary>
+        public List<YuanCivilizedCreation> SubCivilizedCreations { get; set; }
+
+
+        public void InitSubCivilizedCreations(List<YuanCivilizedCreation> civilizedCreations)
+        {
+            this.SubCivilizedCreations = civilizedCreations;
+        }
     }
 }

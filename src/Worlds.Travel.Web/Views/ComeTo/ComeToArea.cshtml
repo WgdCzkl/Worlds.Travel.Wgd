@@ -12,7 +12,7 @@
         <select name="areaKeyName">
             @foreach (var area in Model.Areas)
             {
-                <option value="@area.Name.KeyName">@area.Name</option>
+                <option value="@area.Key">@area.Name</option>
             }
         </select>
         <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
@@ -25,7 +25,7 @@
         <select name="keyName">
             @foreach (var item in Model.Architectures)
             {
-                <option value="@item.Name.KeyName">@item.Name</option>
+                <option value="@item.Key">@item.Name</option>
             }
         </select>
         <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
@@ -38,7 +38,7 @@
         <select name="keyName">
             @foreach (var item in Model.Roads)
             {
-                <option value="@item.Name.KeyName">@item.Name</option>
+                <option value="@item.Key">@item.Name</option>
             }
         </select>
         <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>

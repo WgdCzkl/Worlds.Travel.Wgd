@@ -6,14 +6,13 @@ using Worlds.Model.Macroscopic.CivilizedCreation;
 
 namespace Worlds.Travel.Web.Models.ComeTo
 {
-    public class ComeToStoreyViewModel
+    public class ComeToSuiteViewModel
     {
-        public YuanStorey CurrStorey { get; set; }
+        public YuanSuite CurrSuite { get; set; }
 
         /// <summary>
         /// 房间
         /// </summary>
-        public List<YuanSuite> SuiteRooms { get { return CurrStorey.SuiteRooms; } }
-
+        public List<YuanRoom> Rooms { get { return CurrSuite.Rooms; } }
     }
 }

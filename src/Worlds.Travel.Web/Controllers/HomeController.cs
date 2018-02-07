@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.SpaceTime;
+using Worlds.Model.Games;
 using Worlds.Travel.Web.Controllers.Base;
 using Worlds.Travel.Web.Infrastructures;
 using Worlds.Travel.Web.Models.Home;
@@ -42,13 +44,10 @@ namespace Worlds.Travel.Web.Controllers
 
         public ActionResult ComeTo()
         {
-
             PlanetSpaceTime time = null;
+            SessionHelper.Add<HumanWorld>(WebConstants.SESSION_KEY_WORLD, _humanWorldService.GetHumanWorld(CurrPassport.PassportNo, time));
 
-            var humanWorld = _humanWorldService.GetHumanWorld(CurrPassport.PassportNo, time);
-
-            SessionHelper.Add<HumanWorld>(WebConstants.SESSION_KEY_WORLD, humanWorld);
-
+            SessionHelper.Add<ComeToModels>(WebConstants.SESSION_KEY_COME_TO_MODEL, new ComeToModels().SetGalaxys(_planetWorldService.GetOpenGalaxys()));
             return RedirectToAction("ComeToGalaxy", "ComeTo");
         }
     }

@@ -162,6 +162,7 @@
     <Compile Include="Models\ComeTo\ComeToPlanetTimeViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToRoadViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToStoreyViewModel.cs" />
+    <Compile Include="Models\ComeTo\ComeToSuiteViewModel.cs" />
     <Compile Include="Models\Home\SceneSelectionViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToAreaViewModel.cs" />
     <Compile Include="Models\ComeTo\ComeToGalaxyViewModel.cs" />
@@ -191,6 +192,7 @@
     <Content Include="Views\ComeTo\ComeToArchitecture.cshtml" />
     <Content Include="Views\ComeTo\ComeToStorey.cshtml" />
     <Content Include="Views\ComeTo\ComeToRoad.cshtml" />
+    <Content Include="Views\ComeTo\ComeToSuite.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

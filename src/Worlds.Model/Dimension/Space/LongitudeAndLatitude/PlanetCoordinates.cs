@@ -1,4 +1,6 @@
-﻿namespace Worlds.Model.Dimension.Space.LongitudeAndLatitude
+﻿using Worlds.Model.Dimension.Volume;
+
+namespace Worlds.Model.Dimension.Space.LongitudeAndLatitude
 {
     /// <summary>
     /// 星球坐标系
@@ -35,5 +37,25 @@
         {
             return string.Format("经度{0}纬度{1}球心距{2}", Lat, Lon, Height);
         }
+
+        #region 方法
+        public PlanetCoordinates GetNewPlanetCoordinates(CoordinateThree coordinate)
+        {
+            PlanetCoordinates newPoint = new PlanetCoordinates();
+            newPoint.Lat = this.Lat.Value + coordinate.SubCoordinate.X.Value;
+            newPoint.Lon = this.Lon.Value + coordinate.SubCoordinate.Y.Value;
+            newPoint.Height = this.Height.Value + coordinate.H.Value;
+            return newPoint;
+        }
+
+        /// <summary>
+        /// 自定义 隐式转换
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator PlanetCoordinates(CoordinateThree value)
+        {
+            return new PlanetCoordinates(value.SubCoordinate.X.Value, value.SubCoordinate.Y.Value, value.H.Value);
+        }
+        #endregion
     }
 }
