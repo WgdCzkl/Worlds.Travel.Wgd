@@ -10,12 +10,13 @@ using Worlds.Model.Dimension.Time;
 using Worlds.Model.Games;
 using Worlds.Model.Macroscopic.CivilizedCreation;
 using Worlds.Travel.Web.Infrastructures;
+using Worlds.Travel.Web.Infrastructures.Factorys;
 
 namespace Worlds.Travel.Web.Controllers.Base
 {
     public class BaseComeToWorldsController : BaseController
     {
-        private readonly IPlanetWorldService _planetWorldService;
+        protected readonly IPlanetWorldService _planetWorldService;
 
         public BaseComeToWorldsController(IPlanetWorldService planetWorldService
             )
@@ -26,33 +27,12 @@ namespace Worlds.Travel.Web.Controllers.Base
         /// <summary>
         /// 获取降临的信息
         /// </summary>
-        public ComeToModels ComeToModels
+        public ComeToModels CurrComeToModels
         {
             get
             {
-                var model = SessionHelper.Get<ComeToModels>(WebConstants.SESSION_KEY_COME_TO_MODEL);
-                if (model == null)
-                {
-                    model = new ComeToModels();
-                }
-                return model;
+                return ComeToModelFactory.CurrComeToModels;
             }
-        }
-
-        /// <summary>
-        /// 更新降临的信息
-        /// </summary>
-        /// <param name="comeToModels"></param>
-        public ComeToModels UpdateComeToModels(ComeToModels comeToModels)
-        {
-            SessionHelper.Add<ComeToModels>(WebConstants.SESSION_KEY_COME_TO_MODEL, comeToModels);
-            return comeToModels;
-        }
-
-
-        public List<YuanArea> GetNewOpenAreas(string path)
-        {
-            return _planetWorldService.GetOpenYuanAreas(path);
         }
 
     }

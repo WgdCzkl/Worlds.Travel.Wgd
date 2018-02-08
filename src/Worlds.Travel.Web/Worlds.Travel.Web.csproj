@@ -155,6 +155,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructures\AutofacConfig.cs" />
+    <Compile Include="Infrastructures\Factorys\ComeToModelFactory.cs" />
     <Compile Include="Infrastructures\SessionHelper.cs" />
     <Compile Include="Infrastructures\WebConstants.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />

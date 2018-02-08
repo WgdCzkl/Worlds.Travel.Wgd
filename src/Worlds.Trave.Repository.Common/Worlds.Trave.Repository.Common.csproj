@@ -41,7 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="IReadOnlyRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="PageOfList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortDirection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Worlds\" />
@@ -62,6 +67,8 @@
     <Content Include="App_Data\Galaxys\SolarSystem.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\Users\e38892c0-d040-4af4-b815-037969115462\3cfb2503-fb4b-43c8-889c-863d33326c0c\ComeToInfo.xml" />
+    <Content Include="App_Data\Users\Users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

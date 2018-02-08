@@ -69,7 +69,9 @@
     <Compile Include="Dimension\Volume\CoordinateTwo.cs" />
     <Compile Include="Dimension\Volume\YuanLength.cs" />
     <Compile Include="Extensions\BzStringExtensions.cs" />
+    <Compile Include="Games\ArchivePoint.cs" />
     <Compile Include="Games\ComeToModel.cs" />
+    <Compile Include="Games\UserModel.cs" />
     <Compile Include="Macroscopic\Animals\Human.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanCivilizedCreation.cs" />
     <Compile Include="Macroscopic\CivilizedCreation\YuanRoad.cs" />

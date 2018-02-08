@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<UserModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>6c06680a-1577-49b6-9215-7d8dce14c16f</ID>
+  <Name>
+    <ID>dd6583cd-5e99-47d7-9f01-c568d2dc1a32</ID>
+    <KeyName>盘古</KeyName>
+    <Name>盘古</Name>
+  </Name>
+  <ArchivePoints>
+    <ArchivePoint>
+      <ID>c262a6e7-abb6-401f-b253-345a463413ab</ID>
+
+    </ArchivePoint>
+  </ArchivePoints>
+</UserModel>

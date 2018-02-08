@@ -17,6 +17,11 @@ namespace Worlds.Model.Games
     /// <typeparam name="T"></typeparam>
     public class ComeToModel<T> where T : Yuan
     {
+        public ComeToModel()
+        {
+
+        }
+
         public ComeToModel(List<T> opens)
         {
             Opens = opens;
@@ -52,15 +57,12 @@ namespace Worlds.Model.Games
         /// </summary>
         public T Curr { get; set; }
 
-
         public ComeToModel<T> SetCurr(string key)
         {
             this.Curr = Opens.Find(o => o.Key == key);
             this.AddSelected(Curr);
             return this;
         }
-
-
 
         public List<T> AddSelected(T sel)
         {
@@ -73,8 +75,12 @@ namespace Worlds.Model.Games
     /// <summary>
     /// 降临对象s
     /// </summary>
-    public class ComeToModels
+    public class ComeToModels : Yuan
     {
+        public ComeToModels()
+        {
+
+        }
 
         #region 属性
         /// <summary>
@@ -97,7 +103,7 @@ namespace Worlds.Model.Games
         /// </summary>
         public ComeToModel<YuanArea> Area { get; set; }
 
-        public string AreaPaths
+        public string Paths
         {
             get
             {
@@ -174,7 +180,6 @@ namespace Worlds.Model.Games
             return this;
         }
 
-
         public ComeToModels SetCurrArea(string key)
         {
             this.Area.SetCurr(key);
@@ -187,6 +192,31 @@ namespace Worlds.Model.Games
             return this;
         }
 
+        public ComeToModels SetCurrArchitectur(string key)
+        {
+            this.Architectur = new ComeToModel<YuanArchitecture>(Area.Curr.Architectures);
+            this.Architectur.SetCurr(key);
+            return this;
+        }
+
+        public ComeToModels SetCurrStorey(string key)
+        {
+            this.Storey = new ComeToModel<YuanStorey>(Architectur.Curr.SubStoreys);
+            this.Storey.SetCurr(key);
+            return this;
+        }
+
+        public ComeToModels UpdateOpenStoreys(List<YuanStorey> storeys)
+        {
+            Storey = new ComeToModel<YuanStorey>(storeys);
+            return this;
+        }
+
+        public ComeToModels UpdateOpenSuites(List<YuanSuite> suites)
+        {
+            Suite = new ComeToModel<YuanSuite>(suites);
+            return this;
+        }
         #endregion
 
     }

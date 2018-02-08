@@ -10,10 +10,12 @@ using Worlds.Model.Civilization.DailyLife;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.Time;
 using Worlds.Model.Dimension.Volume;
+using Worlds.Model.Games;
 using Worlds.Model.Macroscopic.CivilizedCreation;
 using Worlds.Trave.Repository.Common.Helper;
 using Worlds.Travel.Web.Controllers.Base;
 using Worlds.Travel.Web.Infrastructures;
+using Worlds.Travel.Web.Infrastructures.Factorys;
 using Worlds.Travel.Web.Models.ComeTo;
 
 namespace Worlds.Travel.Web.Controllers
@@ -31,20 +33,13 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToGalaxy()
         {
 
-            CoordinateTwo two = new CoordinateTwo(1M, 2M);
-            var s = BzStringExtensions<CoordinateTwo>.GetBzString(two);
+            var user = new UserModel() { Name = "盘古" };
+            user.ArchivePoints.Add(new ArchivePoint() { ComeToInfo = CurrComeToModels });
 
-            YuanRoom room = new YuanRoom("702");
-            var list = new List<YuanCivilizedCreation>();
-            list.Add(new YuanCivilizedCreation("床"));
-            list.Add(new YuanCivilizedCreation("柜子"));
-            list.Add(new YuanCivilizedCreation("椅子"));
-            list.Add(new YuanCivilizedCreation("电脑"));
-            room.InitSubCivilizedCreations(list);
-            string str = XmlHelper.T2XML<YuanRoom>(room);
+            string str = XmlHelper.T2XML<UserModel>(user);
 
             ComeToGalaxyViewModel vm = new ComeToGalaxyViewModel();
-            vm.Galaxys = base.ComeToModels.Galaxy.Opens;
+            vm.Galaxys = CurrComeToModels.Galaxy.Opens;
 
             return View(vm);
         }
@@ -55,9 +50,9 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToPlanet(string galaxyKey)
         {
-            base.UpdateComeToModels(ComeToModels.SetCurrGalaxy(galaxyKey));
+            ComeToModelFactory.ComeToGalaxy(galaxyKey);
             ComeToPlanetViewModel vm = new ComeToPlanetViewModel();
-            vm.Planets = base.ComeToModels.Planet.Opens;
+            vm.Planets = CurrComeToModels.Planet.Opens;
             return View(vm);
         }
 
@@ -67,9 +62,9 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToPlanetTime(string planetKey)
         {
-            base.UpdateComeToModels(ComeToModels.SetCurrPlanet(planetKey));
+            ComeToModelFactory.ComeToPlanet(planetKey);
             ComeToPlanetTimeViewModel vm = new ComeToPlanetTimeViewModel();
-            vm.PlanetTimes = base.ComeToModels.PlanetTime.Opens;
+            vm.PlanetTimes = base.CurrComeToModels.PlanetTime.Opens;
             return View(vm);
         }
 
@@ -80,11 +75,9 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult SelectedPlanetTime(string planetTiemKeyName)
         {
-            base.UpdateComeToModels(ComeToModels.SetCurrPlanetTimeByKeyName(planetTiemKeyName));
-            base.UpdateComeToModels(ComeToModels.UpdateArea(GetNewOpenAreas(ComeToModels.AreaPaths)));
-
+            ComeToModelFactory.ComeToPlanetTime(_planetWorldService, planetTiemKeyName);
             ComeToAreaViewModel vm = new ComeToAreaViewModel();
-            vm.Areas = base.ComeToModels.Area.Opens;
+            vm.Areas = CurrComeToModels.Area.Opens;
             return View("ComeToArea", vm);
         }
 
@@ -95,17 +88,15 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToArea(string areaKeyName)
         {
-            base.UpdateComeToModels(ComeToModels.SetCurrArea(areaKeyName));
-            base.UpdateComeToModels(ComeToModels.UpdateOpenAreas(GetNewOpenAreas(ComeToModels.AreaPaths)));
-
-            if (ComeToModels.Area.Curr == null)
+            ComeToModelFactory.ComeToArea(_planetWorldService, areaKeyName);
+            if (CurrComeToModels.Area.Curr == null)
             {
                 return View("SceneSelection", "Home");
             }
 
             ComeToAreaViewModel vm = new ComeToAreaViewModel();
-            vm.CurrArea = base.ComeToModels.Area.Curr;
-            vm.Areas = base.ComeToModels.Area.Opens;
+            vm.CurrArea = CurrComeToModels.Area.Curr;
+            vm.Areas = CurrComeToModels.Area.Opens;
 
 
             return View(vm);
@@ -119,9 +110,9 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToArchitecture(string keyName)
         {
-
+            ComeToModelFactory.ComeToArchitecture(keyName);
             ComeToArchitectureViewModel vm = new ComeToArchitectureViewModel();
-            vm.CurrArchitecture = base.ComeToModels.Architectur.Opens.Find(a => a.Name.KeyName == keyName);
+            vm.CurrArchitecture = CurrComeToModels.Architectur.Curr;
             return View(vm);
         }
 
@@ -132,8 +123,9 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToStorey(string keyName)
         {
+            ComeToModelFactory.ComeToStorey(_planetWorldService, keyName);
             ComeToStoreyViewModel vm = new ComeToStoreyViewModel();
-            vm.CurrStorey = base.ComeToModels.Storey.Opens.Find(a => a.Name.KeyName == keyName);
+            vm.CurrStorey = base.CurrComeToModels.Storey.Curr;
             return View(vm);
         }
 
@@ -145,7 +137,7 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToSuite(string keyName)
         {
             ComeToSuiteViewModel vm = new ComeToSuiteViewModel();
-            vm.CurrSuite = base.ComeToModels.Suite.Opens.Find(a => a.Name.KeyName == keyName);
+            vm.CurrSuite = base.CurrComeToModels.Suite.Opens.Find(a => a.Name.KeyName == keyName);
             return View(vm);
         }
 
@@ -157,7 +149,7 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToRoad(string keyName)
         {
             ComeToRoadViewModel vm = new ComeToRoadViewModel();
-            vm.CurrRoad = base.ComeToModels.Road.Opens.Find(a => a.Name.KeyName == keyName);
+            vm.CurrRoad = base.CurrComeToModels.Road.Opens.Find(a => a.Name.KeyName == keyName);
             return View(vm);
         }
 
@@ -169,7 +161,7 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult ComeToWorld(string planetKey)
         {
             ComeToWorldViewModel vm = new ComeToWorldViewModel();
-            vm.CurrArea = base.ComeToModels.Area.Curr;
+            vm.CurrArea = base.CurrComeToModels.Area.Curr;
             return View(vm);
         }
 

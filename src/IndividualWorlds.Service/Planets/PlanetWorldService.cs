@@ -10,6 +10,7 @@ using Worlds.Model.Civilization.Symbolizes;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.SpaceTime;
 using Worlds.Model.Dimension.Time;
+using Worlds.Model.Macroscopic.CivilizedCreation;
 using Worlds.Trave.Repository.Common.Helper;
 
 namespace IndividualWorlds.Service.Planets
@@ -55,17 +56,29 @@ namespace IndividualWorlds.Service.Planets
         }
 
         /// <summary>
-        /// 获取开发区域
+        /// 获取开放区域
         /// </summary>
         /// <returns></returns>
         public List<YuanArea> GetOpenYuanAreas(string path)
         {
-
             return XmlHelper.XML2LTByFilePaht<YuanArea>(string.Format(@"{0}\Areas.xml", path));
         }
 
+        /// <summary>
+        /// 获取开放楼层
+        /// </summary>
+        /// <returns></returns>
+        public List<YuanStorey> GetOpenYuanStoreys(string path)
+        {
+            return XmlHelper.XML2LTByFilePaht<YuanStorey>(string.Format(@"{0}\Storeys.xml", path));
+        }
 
 
+        /// <summary>
+        /// 获取开发信息根据星球Key
+        /// </summary>
+        /// <param name="planetKey"></param>
+        /// <returns></returns>
         public PlanetWorldOpenInfoDTO GetOpenInfoByPlanetKey(string planetKey)
         {
             PlanetWorldOpenInfoDTO openInfo = new PlanetWorldOpenInfoDTO();
