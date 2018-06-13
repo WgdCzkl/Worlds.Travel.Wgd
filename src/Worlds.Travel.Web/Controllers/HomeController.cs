@@ -39,10 +39,23 @@ namespace Worlds.Travel.Web.Controllers
         public ActionResult SceneSelection()
         {
             SceneSelectionViewModel vm = new SceneSelectionViewModel();
-         
+            vm.ArchivePoints = CurrUser.ArchivePoints;
             return View(vm);
         }
 
+        #region 存档点读取
+        // GET: Account
+        public ActionResult SelectArchivePoint()
+        {
+            return View();
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 降临
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ComeTo()
         {
             PlanetSpaceTime time = null;

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Worlds.Model.Civilization.DailyLife;
-using Worlds.Model.Civilization.Symbolizes;
+
 
 namespace Worlds.Model.Macroscopic.CivilizedCreation
 {

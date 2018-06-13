@@ -5,10 +5,24 @@
 
 
 <form id="form-login" class="p-t-15" action="@Url.Action("ComeTo", "Home")" , method="POST">
-    模式
-    <select>
-        <option>参观</option>
-        <option>体验</option>
-    </select>
+   
+    <div class="form-group form-group-default">
+        模式
+        <select>
+            <option>参观</option>
+            <option>体验</option>
+        </select>
+
+    </div>
+    <div class="form-group form-group-default">
+        存档
+        <select name="areaKeyName">
+            @foreach (var archive in Model.ArchivePoints)
+            {
+                <option value="@archive.Key">@archive.Name</option>
+            }
+        </select>
+
+    </div>
     <button class="btn btn-primary btn-cons m-t-10" type="submit">降临</button>
 </form>

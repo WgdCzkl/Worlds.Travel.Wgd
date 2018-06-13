@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Worlds.Model.Dimension.Quality
 {
+    /// <summary>
+    /// 元质量
+    /// </summary>
     public class YuanQuality : YuanUnit
     {
         public YuanQuality()

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\FielPathInfo.cs" />
     <Compile Include="Helper\XmlHelper.cs" />
     <Compile Include="IReadOnlyRepository.cs" />
     <Compile Include="IRepository.cs" />
@@ -64,6 +65,7 @@
     <Content Include="App_Data\Earth\PlanetTimes.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\FilePathConfig.xml" />
     <Content Include="App_Data\Galaxys\SolarSystem.xml">
       <SubType>Designer</SubType>
     </Content>

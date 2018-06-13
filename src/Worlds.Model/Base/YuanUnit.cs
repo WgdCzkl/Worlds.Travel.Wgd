@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Worlds.Model
 {
-    public class YuanUnit : Yuan
+    /// <summary>
+    /// 元单位
+    /// </summary>
+    public class YuanUnit
     {
         public YuanUnit()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Worlds.Model.Civilization.Passport;
-using Worlds.Model.Civilization.Symbolizes;
+
 
 namespace Worlds.Model.Games
 {
@@ -15,10 +15,6 @@ namespace Worlds.Model.Games
             ArchivePoints = new List<ArchivePoint>();
         }
 
-        /// <summary>
-        /// 姓名
-        /// </summary>
-        public YuanName Name { get; set; }
 
         /// <summary>
         /// 护照

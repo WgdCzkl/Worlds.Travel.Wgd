@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Worlds.Model.Civilization.Symbolizes
+namespace Worlds.Model
 {
     /// <summary>
     /// 标志-名称
     /// </summary>
-    public class YuanName : Yuan
+    public class YuanName 
     {
         public YuanName()
         {

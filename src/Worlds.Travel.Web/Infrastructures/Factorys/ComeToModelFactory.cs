@@ -111,7 +111,7 @@ namespace Worlds.Travel.Web.Infrastructures.Factorys
         public static ComeToModels ComeToStorey(IPlanetWorldService planetWorldService, string key)
         {
             var model = CurrComeToModels.SetCurrStorey(key);
-            model.UpdateOpenStoreys(planetWorldService.GetOpenYuanStoreys(model.Paths));
+            model.UpdateOpenSuites(planetWorldService.GetOpenYuanSuites(model.Paths));
             UpdateComeToModels(model);
             return model;
         }

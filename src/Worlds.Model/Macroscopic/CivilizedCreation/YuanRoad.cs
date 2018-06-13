@@ -1,5 +1,5 @@
 ﻿using Worlds.Model.Civilization.Shapes;
-using Worlds.Model.Civilization.Symbolizes;
+
 
 namespace Worlds.Model.Macroscopic.CivilizedCreation
 {

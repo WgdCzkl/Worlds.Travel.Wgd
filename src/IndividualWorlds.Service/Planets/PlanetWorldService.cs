@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Worlds.Model.Civilization.Areas;
-using Worlds.Model.Civilization.Symbolizes;
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.SpaceTime;
 using Worlds.Model.Dimension.Time;
@@ -35,7 +34,6 @@ namespace IndividualWorlds.Service.Planets
             PlanetWorld planetWorld = new PlanetWorld();
             return planetWorld;
         }
-
 
         /// <summary>
         /// 获取开放星系列表
@@ -73,6 +71,14 @@ namespace IndividualWorlds.Service.Planets
             return XmlHelper.XML2LTByFilePaht<YuanStorey>(string.Format(@"{0}\Storeys.xml", path));
         }
 
+        /// <summary>
+        /// 获取开放套房s
+        /// </summary>
+        /// <returns></returns>
+        public List<YuanSuite> GetOpenYuanSuites(string path)
+        {
+            return XmlHelper.XML2LTByFilePaht<YuanSuite>(string.Format(@"{0}\Suites.xml", path));
+        }
 
         /// <summary>
         /// 获取开发信息根据星球Key

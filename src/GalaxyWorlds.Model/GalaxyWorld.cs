@@ -8,5 +8,6 @@ namespace GalaxyWorlds.Model
 {
     public class GalaxyWorld
     {
+
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Worlds.Model.Civilization.Shapes;
-using Worlds.Model.Civilization.Symbolizes;
+
 using Worlds.Model.Macroscopic.CivilizedCreation;
 
 namespace Worlds.Model.Civilization.Areas

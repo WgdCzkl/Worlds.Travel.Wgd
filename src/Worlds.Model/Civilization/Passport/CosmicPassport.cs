@@ -13,6 +13,11 @@ namespace Worlds.Model.Civilization.Passport
     /// </summary>
     public class CosmicPassport
     {
+        public CosmicPassport()
+        {
+
+        }
+         
 
         /// <summary>
         /// 护照编号

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Worlds.Model.Civilization.Symbolizes;
+
 using Worlds.Model.Dimension.SpaceTime;
 
 namespace Worlds.Model.Macroscopic.Animals

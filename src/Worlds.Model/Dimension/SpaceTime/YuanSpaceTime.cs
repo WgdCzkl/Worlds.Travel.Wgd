@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Worlds.Model.Dimension.SpaceTime
 {
+    /// <summary>
+    /// 元时空
+    /// </summary>
     public class YuanSpaceTime : Yuan
     {
     }

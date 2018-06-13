@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Worlds.Model.Dimension.Volume
 {
+    /// <summary>
+    /// 元长度
+    /// </summary>
     public class YuanLength : YuanUnit
     {
         public YuanLength()

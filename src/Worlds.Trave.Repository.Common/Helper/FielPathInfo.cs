@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Worlds.Model.Dimension.Space
+namespace Worlds.Trave.Repository.Common
 {
-    /// <summary>
-    /// 元空间
-    /// </summary>
-    public class YuanSpace : Yuan
+    public static class FielPathInfo
     {
+        public static string ROOT_PAHT_USER { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Worlds.Model.Civilization.Symbolizes;
+
 
 namespace Worlds.Model.Dimension.Space
 {
@@ -22,8 +22,7 @@ namespace Worlds.Model.Dimension.Space
             CenterPlanet.GalaxyID = this.Key;
             SurroundPlanets = surroundPlanets;
         }
-
-        public YuanName Name { get; set; }
+        
 
         /// <summary>
         /// 父星系

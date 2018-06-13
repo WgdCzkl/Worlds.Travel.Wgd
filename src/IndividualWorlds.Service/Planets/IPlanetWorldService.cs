@@ -49,6 +49,12 @@ namespace IndividualWorlds.Service.Planets
         List<YuanStorey> GetOpenYuanStoreys(string path);
 
         /// <summary>
+        /// 获取开放套房
+        /// </summary>
+        /// <returns></returns>
+        List<YuanSuite> GetOpenYuanSuites(string path);
+
+        /// <summary>
         /// 获取开发信息根据星球Key
         /// </summary>
         /// <param name="planetKey"></param>

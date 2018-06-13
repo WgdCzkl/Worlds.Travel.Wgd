@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Civilization\Symbolizes\" />
     <Folder Include="Macroscopic\Botany\" />
     <Folder Include="Macroscopic\Nonliving\" />
     <Folder Include="Microcosmic\Biology\Cells\" />
@@ -49,7 +50,7 @@
     <Compile Include="Civilization\DailyLife\YuanElevator.cs" />
     <Compile Include="Civilization\Passport\CosmicPassport.cs" />
     <Compile Include="Civilization\Shapes\YuanShape.cs" />
-    <Compile Include="Civilization\Symbolizes\YuanName.cs" />
+    <Compile Include="Base\YuanName.cs" />
     <Compile Include="Dimension\Quality\YuanQuality.cs" />
     <Compile Include="Dimension\SpaceTime\PlanetSpaceTime.cs" />
     <Compile Include="Dimension\SpaceTime\YuanSpaceTime.cs" />
@@ -80,9 +81,10 @@
     <Compile Include="Macroscopic\CivilizedCreation\YuanSuite.cs" />
     <Compile Include="Microcosmic\Biology\Tissues\YuanEye.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Yuan.cs" />
-    <Compile Include="YuanUnit.cs" />
-    <Compile Include="YuanWorld.cs" />
+    <Compile Include="Base\Yuan.cs" />
+    <Compile Include="YuanLocation.cs" />
+    <Compile Include="Base\YuanUnit.cs" />
+    <Compile Include="Base\YuanWorld.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

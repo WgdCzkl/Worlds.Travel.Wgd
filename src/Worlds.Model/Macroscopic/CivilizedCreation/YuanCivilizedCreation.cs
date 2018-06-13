@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Worlds.Model.Civilization.Shapes;
-using Worlds.Model.Civilization.Symbolizes;
+
 
 namespace Worlds.Model.Macroscopic.CivilizedCreation
 {
@@ -28,10 +28,7 @@ namespace Worlds.Model.Macroscopic.CivilizedCreation
             Name = name;
 
         }
-        /// <summary>
-        /// 名称
-        /// </summary>
-        public YuanName Name { get; set; }
+
 
         public string KeyName
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Worlds.Model.Civilization.Areas;
-using Worlds.Model.Civilization.Symbolizes;
+
 using Worlds.Model.Dimension.Space;
 using Worlds.Model.Dimension.Time;
 using Worlds.Model.Macroscopic.CivilizedCreation;
@@ -32,10 +32,10 @@ namespace Worlds.Model.Games
         /// </summary>
         public List<T> Opens { get; set; }
 
-        public List<T> _selecteds = null;
+        private List<T> _selecteds = null;
         /// <summary>
         /// 选择的对象
-        /// </summary>
+        /// </summary>--
         public List<T> Selecteds
         {
             get
@@ -66,8 +66,8 @@ namespace Worlds.Model.Games
 
         public List<T> AddSelected(T sel)
         {
-
-            Selecteds.Add(sel);
+            if (sel != null && !Selecteds.Exists(i => i.Name == sel.Name))
+                Selecteds.Add(sel);
             return Selecteds;
         }
     }
@@ -83,6 +83,11 @@ namespace Worlds.Model.Games
         }
 
         #region 属性
+        /// <summary>
+        /// 降临人物
+        /// </summary>
+        public ComeToModel<UserModel> User { get; set; }
+
         /// <summary>
         /// 星系
         /// </summary>
@@ -117,6 +122,10 @@ namespace Worlds.Model.Games
                     {
                         path = string.Format(@"{0}\{1}", path, item.Name.KeyName);
                     }
+                if (Architectur != null)
+                    path = string.Format(@"{0}\{1}", path, Architectur.Curr.KeyName);
+                if (Storey != null)
+                    path = string.Format(@"{0}\{1}", path, Storey.Curr.KeyName);
                 return path;
             }
         }
@@ -214,6 +223,7 @@ namespace Worlds.Model.Games
 
         public ComeToModels UpdateOpenSuites(List<YuanSuite> suites)
         {
+            Storey.Curr.SuiteRooms = suites;
             Suite = new ComeToModel<YuanSuite>(suites);
             return this;
         }

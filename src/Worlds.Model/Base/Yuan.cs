@@ -41,6 +41,12 @@ namespace Worlds.Model
         private int VisibleGradeRange { get; set; }
 
 
+        #region 属性
+        public YuanName Name {get;set;}
+        #endregion
+
+
+        #region 方法
         /// <summary>
         /// /重新加载
         /// </summary>
@@ -49,5 +55,9 @@ namespace Worlds.Model
         {
 
         }
+        #endregion
+
+
+
     }
 }

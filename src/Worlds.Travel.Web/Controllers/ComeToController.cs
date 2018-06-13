@@ -32,11 +32,11 @@ namespace Worlds.Travel.Web.Controllers
         /// <returns></returns>
         public ActionResult ComeToGalaxy()
         {
-
+            List<UserModel> users = new List<UserModel>();
             var user = new UserModel() { Name = "盘古" };
             user.ArchivePoints.Add(new ArchivePoint() { ComeToInfo = CurrComeToModels });
-
-            string str = XmlHelper.T2XML<UserModel>(user);
+            users.Add(user);
+            string str = XmlHelper.LT2XML<UserModel>(users);
 
             ComeToGalaxyViewModel vm = new ComeToGalaxyViewModel();
             vm.Galaxys = CurrComeToModels.Galaxy.Opens;

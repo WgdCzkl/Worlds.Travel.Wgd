@@ -13,7 +13,7 @@
         <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
         <Name>
           <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
-          <KeyName>35栋</KeyName>
+          <KeyName>35</KeyName>
           <Name>35栋</Name>
           <NickNames />
           <UsedNames />
@@ -71,7 +71,7 @@
             <ID>62ad0f9c-957f-4c22-a62f-ce5673a78150</ID>
             <Name>
               <ID>e51c0558-362d-484e-9713-da59ed6f4c61</ID>
-              <KeyName>7楼</KeyName>
+              <KeyName>7</KeyName>
               <Name>7楼</Name>
             </Name>
             <Rooms>
@@ -117,7 +117,7 @@
         <ID>c870a3b8-b6b6-4091-bb4d-67110f9474d6</ID>
         <Name>
           <ID>7fd8ace6-84c7-4300-99ae-0065a3f990f0</ID>
-          <KeyName>36栋</KeyName>
+          <KeyName>36</KeyName>
           <Name>36栋</Name>
           <NickNames />
           <UsedNames />

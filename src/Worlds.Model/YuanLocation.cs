@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Worlds.Model.Dimension.Space
+
+namespace Worlds.Model
 {
     /// <summary>
-    /// 元空间
+    /// 元地点
     /// </summary>
-    public class YuanSpace : Yuan
+    public class YuanLocation : Yuan
     {
+
     }
 }

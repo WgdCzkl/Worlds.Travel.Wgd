@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Worlds.Model.Dimension.Time
 {
+    /// <summary>
+    /// 元时间
+    /// </summary>
     public class YuanTime : YuanUnit
     {
+        public YuanTime()
+        {
+
+        }
         public YuanTime(decimal value) : base(value)
         {
         }

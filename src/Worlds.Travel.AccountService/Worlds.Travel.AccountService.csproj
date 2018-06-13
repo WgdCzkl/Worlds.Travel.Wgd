@@ -54,6 +54,10 @@
       <Project>{8ADC8457-DCDD-4E38-9213-7FFB1AD98A1B}</Project>
       <Name>Worlds.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Worlds.Trave.Repository.Common\Worlds.Trave.Repository.Common.csproj">
+      <Project>{738DE686-EDA4-456C-BCD3-9DAA92BB9E79}</Project>
+      <Name>Worlds.Trave.Repository.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Worlds.Travel.Infrastructure\Worlds.Travel.Infrastructure.csproj">
       <Project>{D93B62D1-267C-4E10-A1E1-407087B23B32}</Project>
       <Name>Worlds.Travel.Infrastructure</Name>

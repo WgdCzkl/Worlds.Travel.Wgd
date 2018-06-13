@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Worlds.Model.Civilization.Passport;
+using Worlds.Model.Games;
 using Worlds.Travel.Web.Infrastructures;
 
 namespace Worlds.Travel.Web.Controllers.Base
@@ -57,6 +58,22 @@ namespace Worlds.Travel.Web.Controllers.Base
         protected JsonResult ToJson(bool success, string message = null)
         {
             return Json(new { success = (success ? 1 : 0), message = (success ? (string.IsNullOrWhiteSpace(message) ? "成功" : message) : (string.IsNullOrWhiteSpace(message) ? "失败" : message)) });
+        }
+
+        /// <summary>
+        /// 当前用户
+        /// </summary>
+        public UserModel CurrUser
+        {
+            get
+            {
+                var user = SessionHelper.Get<UserModel>(WebConstants.SESSION_KEY_USER);
+                if (user == null)
+                {
+                    user = new UserModel();
+                }
+                return user;
+            }
         }
 
         public CosmicPassport CurrPassport
